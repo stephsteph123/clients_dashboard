@@ -168,6 +168,10 @@ aside {
     padding-bottom: 100px;
 }
 
+.tertiary-menu {
+    padding-bottom: 100px;
+}
+
 aside ul li {
     padding: 12px;
     display: flex;
