@@ -7,7 +7,8 @@ aside,
 .contacts-card,
 .card-body,
 .card-header,
-.avatar {
+.avatar,
+.stats-card {
     padding: 8px;
 }
 
@@ -56,6 +57,7 @@ aside {
     flex-direction: column;
     flex: 1 1 100%;
     height: 100vh;
+    width: 100vw;
 }
 
 .navbar {
@@ -78,12 +80,13 @@ aside {
 .container {
     display: flex;
     height: 40vh;
+    width: 90vw;
 }
 
 .lower-container {
     display: flex;
     height: 60vh;
-
+    width: 90vw;
 }
 
 .users,
@@ -105,6 +108,14 @@ aside {
 .contacts-card {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
     background-color: white;
@@ -124,6 +135,33 @@ aside {
 .card-body {
     display: flex;
     flex-wrap: wrap;
+}
+
+.stats-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.stat-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.stat-name {
+    width: 70%;
+}
+
+.stat-percent {
+    width: 30%;
+}
+
+.stats-body img {
+    height: 30px;
+    width: 200px;
+
 }
 
 .avatar {
@@ -261,10 +299,4 @@ aside ul li img {
     padding: 12px;
     margin-right: 1em;
     height: 100vh;
-}
-
-.stat-line {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
 }
