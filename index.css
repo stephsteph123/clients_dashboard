@@ -2,6 +2,7 @@ aside,
 .navbar,
 .nav,
 .container,
+.lower-container,
 .content,
 .contacts-card,
 .card-body,
@@ -76,10 +77,17 @@ aside {
 
 .container {
     display: flex;
+    height: 40vh;
+}
+
+.lower-container {
+    display: flex;
+    height: 60vh;
+
 }
 
 .users,
-.stats {
+.stats-calls {
     display: flex;
     flex-direction: row;
 }
@@ -89,7 +97,7 @@ aside {
     padding: 16px;
 }
 
-.stats {
+.stats-calls {
     width: 30%;
     padding: 16px;
 }
@@ -97,6 +105,7 @@ aside {
 .contacts-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     background-color: white;
     border-radius: 16px;
@@ -235,4 +244,27 @@ aside ul li img {
 
 .greeting .user-type {
     font-size: 12px;
+}
+
+.performance {
+    width: 50%;
+    padding: 12px;
+}
+
+.results {
+    width: 20%;
+    padding: 12px;
+    margin-right: 1em;
+}
+.schedule {
+    width: 30%;
+    padding: 12px;
+    margin-right: 1em;
+    height: 100vh;
+}
+
+.stat-line {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
 }
