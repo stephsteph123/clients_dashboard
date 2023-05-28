@@ -1,3 +1,4 @@
+/* global */
 aside,
 .navbar,
 .nav,
@@ -8,7 +9,8 @@ aside,
 .card-body,
 .card-header,
 .avatar,
-.stats-card {
+.stats-card,
+.performance-card {
     padding: 8px;
 }
 
@@ -22,10 +24,6 @@ h6,
 span {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(6, 2, 53);
-}
-
-.nav {
-    margin: 16px;
 }
 
 .body {
@@ -50,76 +48,10 @@ aside {
     width: 100dvw;
 }
 
-
-.content {
-    background-color: rgb(232, 240, 240, 0.5);
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 100%;
-    height: 100vh;
-    width: 100vw;
-}
-
-.navbar {
-    background-color: transparent;
-    justify-content: space-between;
-    display: flex;
-    height: 60px;
-    width: 100%;
-    align-items: center;
-}
-
-.user-greeting {
-    display: flex;
-}
-
-.nav {
-    display: flex;
-}
-
-.container {
-    display: flex;
-    height: 40vh;
-    width: 90vw;
-}
-
-.lower-container {
-    display: flex;
-    height: 60vh;
-    width: 90vw;
-}
-
-.users,
-.stats-calls {
-    display: flex;
-    flex-direction: row;
-}
-
-.users {
-    width: 70%;
-    padding: 16px;
-}
-
-.stats-calls {
-    width: 30%;
-    padding: 16px;
-}
-
-.contacts-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: white;
-    border-radius: 16px;
-}
-
-.stats-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    background-color: white;
-    border-radius: 16px;
+ul li:hover,
+ul li.active {
+    border: 5px solid aliceblue;
+    border-radius: 10%;
 }
 
 .card-header {
@@ -137,31 +69,141 @@ aside {
     flex-wrap: wrap;
 }
 
-.stats-body {
+/* main */
+/* branding */
+
+aside ul li {
+    padding: 12px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
+
+aside ul li img {
+    width: 24px;
+    height: auto;
+}
+
+.branding {
+    width: 100%;
+    height: 40px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+/* menus */
+.primary-menu {
+    padding-bottom: 32px;
+}
+
+.secondary-menu {
+    padding-bottom: 100px;
+}
+
+/* content */
+.content {
+    background-color: rgb(232, 240, 240, 0.5);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* nav */
+
+.user-greeting {
+    display: flex;
+    align-items: center;
+}
+
+.greeting {
+    display: flex;
     flex-direction: column;
 }
 
-.stat-line {
+.greeting .user-name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.greeting .user-type {
+    font-size: 12px;
+}
+
+.profile {
+    margin-right: 16px;
+}
+
+.profile img {
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+}
+
+.nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 16px;
+}
+
+.nav ul {
+    display: flex;
+    flex: 1 1 200px;
+}
+
+.nav ul li {
     padding: 12px;
 }
 
-.stat-name {
+.nav ul li {
+    padding: 12px;
+}
+
+.nav ul li img {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar {
+    background-color: transparent;
+    justify-content: space-between;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+}
+
+/* container */
+
+.container {
+    display: flex;
+    height: 40vh;
+    width: 90vw;
+}
+
+.users,
+.stats-calls {
+    display: flex;
+    flex-direction: row;
+}
+
+/* users */
+
+.users {
     width: 70%;
+    padding: 16px;
 }
 
-.stat-percent {
-    width: 30%;
-}
-
-.stats-body img {
-    height: 30px;
-    width: 200px;
-
+.contacts-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;
 }
 
 .avatar {
@@ -197,103 +239,99 @@ aside {
     margin-top: 10px;
 }
 
-.branding {
-    width: 100%;
-    height: 40px;
+/* stats */
+
+.stats-calls {
+    width: 30%;
+    padding: 16px;
 }
 
-.logo {
-    width: 100%;
-    height: auto;
-}
-
-.primary-menu {
-    padding-bottom: 32px;
-}
-
-.secondary-menu {
-    padding-bottom: 100px;
-}
-
-
-
-aside ul li {
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-
-ul li:hover,
-ul li.active {
-    border: 5px solid aliceblue;
-    border-radius: 10%;
-}
-
-
-aside ul li img {
-    width: 24px;
-    height: auto;
-}
-
-.nav ul {
-    display: flex;
-    flex: 1 1 200px;
-}
-
-.nav ul li {
-    padding: 12px;
-}
-
-.nav ul li {
-    padding: 12px;
-}
-
-.nav ul li img {
-    width: 24px;
-    height: 24px;
-}
-
-.user-greeting {
-    display: flex;
-    align-items: center;
-}
-
-.profile {
-    margin-right: 16px;
-}
-
-.profile img {
-    height: 4em;
-    width: 4em;
-    border-radius: 50%;
-}
-
-.greeting {
+.stats-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;
 }
 
-.greeting .user-name {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.2;
+.stats-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+}
+.stats-body img {
+    height: 30px;
+    width: 200px;
 }
 
-.greeting .user-type {
-    font-size: 12px;
+.stat-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px;
 }
 
-.performance {
+.stat-name {
+    width: 70%;
+}
+
+.stat-percent {
+    width: 30%;
+}
+
+/* lower container  */
+.lower-container {
+    display: flex;
+    height: 60vh;
+    width: 90vw;
+}
+
+/* performance */
+
+.performance-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 16px;
+    height: 70%;
     width: 50%;
     padding: 12px;
 }
+
+.performance-body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.performance-class {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.performance-title {
+    width: 70%;
+}
+
+.performance-percent {
+    width: 30%;
+}
+
+/* results */
 
 .results {
     width: 20%;
     padding: 12px;
     margin-right: 1em;
 }
+
+/* schedule */
+
 .schedule {
     width: 30%;
     padding: 12px;
