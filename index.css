@@ -260,11 +260,11 @@ aside ul li img {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    width: 200px;
+    width: 100%;
 }
 .stats-body img {
     height: 30px;
-    width: 200px;
+    width: 90%;
 }
 
 .stat-line {
@@ -275,11 +275,11 @@ aside ul li img {
 }
 
 .stat-name {
-    width: 70%;
+    width: 90%;
 }
 
 .stat-percent {
-    width: 30%;
+    width: 10%;
 }
 
 /* lower container  */
@@ -296,30 +296,45 @@ aside ul li img {
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
+    padding: 16px;
     border-radius: 16px;
     height: 70%;
     width: 50%;
-    padding: 12px;
 }
 
 .performance-body{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+.performance-body img{
+    width: 10%;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
 }
 
 .performance-class {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 16px;
 }
 
 .performance-title {
-    width: 70%;
+    width: 80%;
 }
 
 .performance-percent {
-    width: 30%;
+    width: 10%;
+}
+
+.performance-date {
+    color: darkgray;
+    margin-top: .5em;
+    font-size: 12px;
 }
 
 /* results */
@@ -336,5 +351,4 @@ aside ul li img {
     width: 30%;
     padding: 12px;
     margin-right: 1em;
-    height: 100vh;
 }
