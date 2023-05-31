@@ -445,7 +445,6 @@ aside ul li img {
   @keyframes p {
     from{--p:0}
   }
-}
 
 /* schedule */
 
@@ -469,9 +468,11 @@ aside ul li img {
     justify-content: space-between;
 }
 
-.day-of-week {
+.schedule-options {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 50px;
     width: 40px;
     background-color: royalblue;
