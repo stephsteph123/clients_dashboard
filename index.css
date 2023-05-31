@@ -12,7 +12,7 @@ aside,
 .stats-card,
 .performance-card,
 .results-card {
-    padding: 8px;
+  padding: 8px;
 }
 
 p,
@@ -23,270 +23,271 @@ h4,
 h5,
 h6,
 span {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(6, 2, 53);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(6, 2, 53);
 }
 
 .body {
-    background-color: rgb(227, 249, 249);
-    display: flex;
+  background-color: rgb(227, 249, 249);
+  display: flex;
 }
 
 aside {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 16px;
-    width: 70px;
-    height: 100dvh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  width: 70px;
+  height: 100dvh;
 }
 
 .main {
-    background-color: rgb(227, 249, 249);
-    display: flex;
-    height: 100dvh;
-    width: 100dvw;
+  background-color: rgb(227, 249, 249);
+  display: flex;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 ul li:hover,
 ul li.active {
-    border: 5px solid aliceblue;
-    border-radius: 10%;
+  border: 5px solid aliceblue;
+  border-radius: 10%;
 }
 
 .card-header {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header .header {
-    font-weight: bold;
-    font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .card-body {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@property --p{
-    syntax: '<number>';
-    inherits: true;
-    initial-value: 0;
-  }
+@property --p {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
 
 /* main */
 /* branding */
 
 aside ul li {
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 aside ul li img {
-    width: 24px;
-    height: auto;
+  width: 24px;
+  height: auto;
 }
 
 .branding {
-    width: 100%;
-    height: 40px;
+  width: 100%;
+  height: 40px;
 }
 
 .logo {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* menus */
 .primary-menu {
-    padding-bottom: 32px;
+  padding-bottom: 32px;
 }
 
 .secondary-menu {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 /* content */
 .content {
-    background-color: rgb(232, 240, 240, 0.5);
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 100%;
-    height: 100vh;
-    width: 100vw;
+  background-color: rgb(232, 240, 240, 0.5);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* nav */
 
 .user-greeting {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .greeting {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .greeting .user-name {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.2;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 .greeting .user-type {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .profile {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 .profile img {
-    height: 4em;
-    width: 4em;
-    border-radius: 50%;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
 }
 
 .nav {
-    display: flex;
-    margin: 16px;
+  display: flex;
+  margin: 16px;
 }
 
 .nav ul {
-    display: flex;
-    flex: 1 1 200px;
+  display: flex;
+  flex: 1 1 200px;
 }
 
 .nav ul li {
-    padding: 12px;
+  padding: 12px;
 }
 
 .nav ul li {
-    padding: 12px;
+  padding: 12px;
 }
 
 .nav ul li img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .navbar {
-    background-color: transparent;
-    justify-content: space-between;
-    display: flex;
-    height: 60px;
-    width: 100%;
-    align-items: center;
+  background-color: transparent;
+  justify-content: space-between;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
 }
 
 /* container */
 
 .container {
-    display: flex;
-    height: 40vh;
-    width: 90vw;
+  display: flex;
+  height: 40vh;
+  width: 90vw;
 }
 
 .users,
 .stats-calls {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 /* users */
 
 .users {
-    width: 70%;
-    padding: 16px;
+  width: 70%;
+  padding: 16px;
 }
 
 .contacts-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: white;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
 }
 
 .avatar {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 72px;
-    height: 72px;
-    width: 72px;
-    border-radius: 12px;
-    align-items: center;
-    margin-right: 16px;
-    margin-bottom: 16px;
-    cursor: pointer;
-    max-height: 100px;
-    overflow-y: scroll;
-    background-color: #332d52;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 72px;
+  height: 72px;
+  width: 72px;
+  border-radius: 12px;
+  align-items: center;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  max-height: 100px;
+  overflow-y: scroll;
+  background-color: #332d52;
 }
 
 .avatar:hover {
-    box-shadow: 0 0 10px 0 rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 10px 0 rgba(255, 0, 0, 0.4);
 }
 
 .avatar img {
-    height: 48px;
-    width: 48px;
-    border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
 }
 
 .avatar .name {
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
 }
 
 /* stats */
 
 .stats-calls {
-    width: 30%;
-    padding: 16px;
+  width: 30%;
+  padding: 16px;
 }
 
 .stats-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    background-color: white;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
 }
 
 .stats-body {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 .stats-body img {
-    height: 30px;
-    width: 90%;
+  height: 30px;
+  width: 90%;
 }
 
 .stat-line {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px;
 }
 
 .stat-name {
-    width: 90%;
+  width: 90%;
 }
 
 .stat-percent {
-    width: 10%;
+  width: 10%;
 }
 
 /* lower container  */
@@ -312,39 +313,39 @@ aside ul li img {
     border-radius: 16px;
 }
 
-.performance-body{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
+.performance-body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.performance-body img{
-    width: 10%;
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
+.performance-body img {
+  width: 10%;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
 }
 
 .performance-class {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 .performance-title {
-    width: 80%;
+  width: 80%;
 }
 
 .performance-percent {
-    width: 10%;
+  width: 10%;
 }
 
 .performance-date {
-    color: darkgray;
-    margin-top: .5em;
-    font-size: 12px;
+  color: darkgray;
+  margin-top: 0.5em;
+  font-size: 12px;
 }
 
 /* results */
@@ -397,10 +398,10 @@ aside ul li img {
 }
 
 .result-title {
-    display: flex;
-    font-size: 12px;
-    align-items: center;
-    margin-left: 1em;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  margin-left: 1em;
 }
 
 .pie {
@@ -444,7 +445,7 @@ aside ul li img {
   @keyframes p {
     from{--p:0}
   }
-
+}
 
 /* schedule */
 
@@ -476,3 +477,4 @@ aside ul li img {
     background-color: royalblue;
     border-radius: 20%;
 }
+
