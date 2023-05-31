@@ -465,7 +465,13 @@ aside ul li img {
 
 .schedule-body{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.schedule-days{
+    display: flex;
+    justify-content: space-around;
 }
 
 .schedule-options {
@@ -476,6 +482,45 @@ aside ul li img {
     height: 50px;
     width: 40px;
     background-color: royalblue;
-    border-radius: 20%;
+    border-radius: 10px;
 }
 
+.day-of-month, 
+.day-of-week {
+    color:aliceblue;
+}
+
+.slider {
+    margin-left: 1em;
+}
+
+.times{
+    color: darkgray;
+    padding: 4px;
+}
+
+.appointment{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3em;
+    width: 200px;
+    border-radius: 10px;
+    background-color: royalblue;
+}
+
+.appointment-title {
+    display: flex;
+    color:aliceblue;
+    margin-left: 1em;
+    margin-top: 2px;
+    padding: 2px;
+}
+
+.appointment-desc {
+    display: flex;
+    color:aliceblue;
+    font-size: x-small;
+    margin-left: 16px;
+    margin-bottom: 2px;
+    padding: 2px;
+}
