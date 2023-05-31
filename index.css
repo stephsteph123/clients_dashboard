@@ -363,9 +363,9 @@ aside ul li img {
     border-radius: 16px;
 }
 
-.results-body {
-  display: flex;
-  justify-content: space-between;
+.results-body{
+    display: flex;
+    justify-content: space-between;
 }
 
 .results-left {
@@ -478,7 +478,3 @@ aside ul li img {
     border-radius: 20%;
 }
 
-.day-of-week,
-.date {
-    color:white;
-}
