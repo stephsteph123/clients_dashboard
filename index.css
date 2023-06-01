@@ -257,10 +257,12 @@ aside ul li img {
 .stats-card {
   display: flex;
   flex-direction: column;
+  height: fit-content;
   justify-content: space-between;
   width: 100%;
   background-color: white;
   border-radius: 16px;
+  padding: 16px;
 }
 
 .stats-body {
@@ -269,7 +271,15 @@ aside ul li img {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+
+  .progressbar {
+    display: flex;
+    width: 60%;
+    margin: 8px 0;
+    border: 1px solid rgb(5, 202, 88)
+  }
 }
+
 .stats-body img {
   height: 30px;
   width: 90%;
@@ -292,25 +302,25 @@ aside ul li img {
 
 /* lower container  */
 .lower-container {
-    display: flex;
-    height: 40vh;
+  display: flex;
+  height: 40vh;
 }
 
 /* performance */
 
 .performance {
-    width: 70%;
-    padding: 4px;
-    padding-left: 12px;
+  width: 70%;
+  padding: 4px;
+  padding-left: 12px;
 }
 
 .performance-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-    padding: 16px;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
 }
 
 .performance-body {
@@ -351,50 +361,51 @@ aside ul li img {
 /* results */
 
 .results {
-    padding: 4px;
+  padding: 4px;
 }
 
 .results-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-    padding: 16px;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
 }
 
-.results-body{
-    display: flex;
-    justify-content: space-between;
+.results-body {
+  display: flex;
+  justify-content: space-between;
 }
 
 .results-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.results-left-1 {
-    display: flex;
-    padding: 4px;
+.row {
+  display: flex;
+  padding: 4px;
+
+  /* browsers now support scss like nesting natively so you can do this */
+  .dot {
+    min-width: 25px;
+  }
 }
 
-.results-left-2 {
-    display: flex;
-    padding: 4px;
-}
 
-.results-right{
-    display: flex;
-    padding: 12px;
+.results-right {
+  display: flex;
+  padding: 12px;
 }
 
 .dot {
-    height: 25px;
-    width: 25px;
-    background-color: red;
-    border-radius: 50%;
-    display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .result-title {
@@ -405,115 +416,121 @@ aside ul li img {
 }
 
 .pie {
-    --p:20;
-    --b:12px;
-    --c:darkred;
-    --w:100px;
-    
-    width:var(--w);
-    aspect-ratio:1;
-    position:relative;
-    display:inline-grid;
-    place-content:center;
-    font-size:25px;
-    font-weight:bold;
-    font-family:sans-serif;
-  }
-  .pie:before,
-  .pie:after {
-    content:"";
-    position:absolute;
-    border-radius:50%;
-  }
-  .pie:before {
-    inset:0;
-    background:
-      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
-      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
-    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-  }
-  .pie:after {
-    inset:calc(50% - var(--b)/2);
-    background:var(--c);
-    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
-  }
-  .animate {
-    animation:p 1s .5s both;
-  }
+  --p: 20;
+  --b: 12px;
+  --c: darkred;
+  --w: 100px;
 
-  @keyframes p {
-    from{--p:0}
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.pie:before,
+.pie:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.pie:before {
+  inset: 0;
+  background:
+    radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie:after {
+  inset: calc(50% - var(--b)/2);
+  background: var(--c);
+  transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+.animate {
+  animation: p 1s .5s both;
+}
+
+@keyframes p {
+  from {
+    --p: 0
   }
+}
 
 /* schedule */
 
 .schedule {
-    display: flex;
-    height: 100%;
-    width: 30%;
-    padding: 4px;
+  display: flex;
+  height: 100%;
+  width: 30%;
+  padding: 4px;
 }
 
 .schedule-card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: white;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
 }
 
-.schedule-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.schedule-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.schedule-days{
-    display: flex;
-    justify-content: space-around;
+.schedule-days {
+  display: flex;
+  justify-content: space-around;
 }
 
 .schedule-options {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 40px;
-    background-color: royalblue;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 40px;
+  background-color: royalblue;
+  border-radius: 10px;
 }
 
-.day-of-month, 
+.day-of-month,
 .day-of-week {
-    color:aliceblue;
+  color: aliceblue;
 }
 
 .slider {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
-.times{
-    color: darkgray;
-    padding: 4px;
+.times {
+  color: darkgray;
+  padding: 4px;
 }
 
-.appointment{
-    display: flex;
-    flex-direction: column;
-    margin-left: 3em;
-    width: 200px;
-    border-radius: 10px;
-    background-color: royalblue;
+.appointment {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  width: 200px;
+  border-radius: 10px;
+  background-color: royalblue;
 }
 
 .appointment-title {
-    display: flex;
-    color:aliceblue;
-    margin-left: 1em;
-    margin-top: 2px;
-    padding: 2px;
+  display: flex;
+  color: aliceblue;
+  margin-left: 1em;
+  margin-top: 2px;
+  padding: 2px;
 }
 
 .appointment-desc {
