@@ -1,0 +1,79 @@
+/* global */
+
+.main-body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  width: 70%;
+  height: 100%;
+}
+
+.contacts {
+  display: flex;
+  background-color: bisque;
+  width: 100%;
+  height: 30%;
+}
+
+.users-2{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 8px;
+
+}
+
+.card-body{
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-middle {
+  display: flex;
+  background-color: azure;
+  height: 20%;
+  justify-content: space-between;
+}
+
+.performance {
+  display: flex;
+  background-color: rosybrown;
+  width: 70%;
+}
+.results {
+  display: flex;
+  background-color: gold;
+  width: 30%;
+}
+.stats-bar {
+  display: flex;
+  background-color: blue;
+  height: 50%;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+  width: 30%;
+  height: 100%;
+}
+
+.stats-call {
+  display: flex;
+  background-color: azure;
+  height: 30%;
+}
+
+.schedules {
+  display: flex;
+  background-color: darkcyan;
+  height: 70%;
+}
