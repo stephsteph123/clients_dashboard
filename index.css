@@ -46,8 +46,8 @@ aside {
 .main {
   background-color: rgb(227, 249, 249);
   display: flex;
-  height: 100dvh;
-  width: 100dvw;
+  /* height: 100dvh;
+  width: 100dvw; */
 }
 
 ul li:hover,
@@ -523,4 +523,51 @@ aside ul li img {
     margin-left: 16px;
     margin-bottom: 2px;
     padding: 2px;
+}
+
+/* stats graph */
+
+.stats-graph {
+    display: flex;
+    padding-left: 12px;
+}
+
+.stats-graph-card{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 55vw;
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.stats-graph-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.stats-graph-body{  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stats-graph-body img {
+    height: 18vh;
+    width: 70vh;
+}
+
+.stats-date{
+    font-size: x-small;
+    color: gray;
+    padding-top: 6px;
+}
+
+.sort-by{
+    color: gray;
+    font-size: small;
 }
