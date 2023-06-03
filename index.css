@@ -341,7 +341,6 @@ aside ul li img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 16px;
 }
 
 .performance-title {
@@ -417,16 +416,16 @@ aside ul li img {
 
 .pie {
   --p: 20;
-  --b: 12px;
+  --b: 8px;
   --c: darkred;
-  --w: 100px;
+  --w: 80px;
 
   width: var(--w);
   aspect-ratio: 1;
   position: relative;
   display: inline-grid;
   place-content: center;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   font-family: sans-serif;
 }
