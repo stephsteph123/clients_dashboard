@@ -10,14 +10,12 @@
 .left-side {
   display: flex;
   flex-direction: column;
-  background-color: aqua;
   width: 70%;
   height: 100%;
 }
 
 .contacts {
   display: flex;
-  background-color: bisque;
   width: 100%;
   height: 30%;
 }
@@ -37,43 +35,73 @@
 
 .left-middle {
   display: flex;
-  background-color: azure;
   height: 20%;
   justify-content: space-between;
 }
 
 .performance {
   display: flex;
-  background-color: rosybrown;
   width: 70%;
 }
+
+.performance-card {
+  width: 100%;
+}
+
 .results {
   display: flex;
-  background-color: gold;
   width: 30%;
 }
+
 .stats-bar {
   display: flex;
-  background-color: blue;
   height: 50%;
+  padding: 4px;
+  padding-left: 12px;
 }
+
+.stats-bar-card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.stats-card-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-card-header .header {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.stats-bar-body{
+   display: flex;
+}
+
+.stats-bar-body img{
+  width: 90%;
+  height: 80%;
+}
+
 
 .right-side {
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
   width: 30%;
   height: 100%;
 }
 
 .stats-call {
   display: flex;
-  background-color: azure;
   height: 30%;
 }
 
 .schedules {
   display: flex;
-  background-color: darkcyan;
   height: 70%;
 }
