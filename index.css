@@ -69,6 +69,8 @@ ul li.active {
 .card-body {
   display: flex;
   flex-wrap: wrap;
+  overflow-y: auto;
+  height: 420px;
 }
 
 @property --p {
@@ -218,14 +220,14 @@ aside ul li img {
   display: flex;
   flex-direction: column;
   flex: 0 0 72px;
-  height: 72px;
+  height: 100px;
   width: 72px;
   border-radius: 12px;
   align-items: center;
   margin-right: 16px;
   margin-bottom: 16px;
   cursor: pointer;
-  max-height: 100px;
+  max-height: 130px;
   overflow-y: scroll;
   background-color: #332d52;
 }
@@ -533,57 +535,57 @@ aside ul li img {
 }
 
 .appointment-desc {
-    display: flex;
-    color:aliceblue;
-    font-size: x-small;
-    margin-left: 16px;
-    margin-bottom: 2px;
-    padding: 2px;
+  display: flex;
+  color: aliceblue;
+  font-size: x-small;
+  margin-left: 16px;
+  margin-bottom: 2px;
+  padding: 2px;
 }
 
 /* stats graph */
 
 .stats-graph {
-    display: flex;
-    padding-left: 12px;
+  display: flex;
+  padding-left: 12px;
 }
 
-.stats-graph-card{
-    display: flex;
-    flex-direction: column;
-    height: 20vh;
-    width: 55vw;
-    background-color: white;
-    padding: 16px;
-    border-radius: 16px;
+.stats-graph-card {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 55vw;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
 }
 
 .stats-graph-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
-.stats-graph-body{  
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+.stats-graph-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .stats-graph-body img {
-    height: 18vh;
-    width: 70vh;
+  height: 18vh;
+  width: 70vh;
 }
 
-.stats-date{
-    font-size: x-small;
-    color: gray;
-    padding-top: 6px;
+.stats-date {
+  font-size: x-small;
+  color: gray;
+  padding-top: 6px;
 }
 
-.sort-by{
-    color: gray;
-    font-size: small;
+.sort-by {
+  color: gray;
+  font-size: small;
 }
