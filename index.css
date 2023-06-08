@@ -277,7 +277,8 @@ aside ul li img {
   .progressbar {
     display: flex;
     width: 60%;
-    margin: 8px 0;
+    margin: 5px 0;
+    margin-left: 10px;
     border: 1px solid rgb(5, 202, 88)
   }
 }
