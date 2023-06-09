@@ -1,12 +1,13 @@
-let api = "https://my.api.mockaroo.com/contacts.json?key=3203fe50";
-let card_body = document.getElementById("id_card_body");
+// contacts
+let api = "http://127.0.0.1:8090/api/collections/contacts/records/";
+let card_body = document.getElementById("id_contact_card_body");
 profiles = [];
 console.log(card_body)
 
 fetch(api)
 .then(response => response.json())
 .then(data => {
-    profiles = data;
+    profiles = data.items;
     getContacts(profiles);
 });
 
@@ -27,3 +28,28 @@ function deleteMe(event) {
     getContacts(profiles);
 }
 
+// projects
+let projectsApi = "http://127.0.0.1:8090/api/collections/projects/records/";
+let project_card_body = document.getElementById("id_project_card_body");;
+projects = [];
+
+
+fetch(projectsApi)
+.then(response => response.json())
+.then(data => {
+    projects = data.items;
+    console.log(projects)
+    getProjects(projects);
+});
+
+function getProjects(projects){
+    projects.forEach(function (project) {
+        project_card_body.innerHTML += `<div class="stat-line">
+        <span class="stat-name">${project.project_name}</span>
+        <span class="stat-percent">${project.project_completed}%</span>
+        <div id="progress-bar-status" style="width ${project.project_completed}%">
+        <div id="progress-bar" style="width: ${project.project_completed}%"></div>
+      </div>
+        </div>`;
+    });
+}

@@ -273,14 +273,23 @@ aside ul li img {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-
-  .progressbar {
-    display: flex;
-    width: 60%;
-    margin: 8px 0;
-    border: 1px solid rgb(5, 202, 88)
-  }
 }
+
+#progress-bar {
+  width: 1%;
+  height: 10px;
+  background-color: limegreen;
+  text-align: center;
+  line-height: 10px;
+  color: white;
+}
+
+#progress-bar-status {
+  width: 100%;
+  margin: 4px;
+  background-color: rgba(50, 205, 50, 0.181);
+}
+
 
 .stats-body img {
   height: 30px;
