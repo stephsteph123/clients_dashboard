@@ -301,6 +301,7 @@ aside ul li img {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 12px;
+  cursor: pointer;
 }
 
 .stat-name {
@@ -339,33 +340,23 @@ aside ul li img {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column;
+  border:1px solid black;
 }
 
-.performance-body img {
-  width: 10%;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-}
-
-.performance-class {
+#id_task_card_body {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
-.performance-title {
-  width: 80%;
+#id_task_card_body table {
+  display: flex;
+  border:1px solid black;
 }
 
-.performance-percent {
-  width: 10%;
-}
-
-.performance-date {
-  color: darkgray;
-  margin-top: 0.5em;
-  font-size: 12px;
+#id_task_card_body th {
+  display: flex;
 }
 
 /* results */
