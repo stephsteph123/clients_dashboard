@@ -57,34 +57,27 @@ let tasksApi = "http://127.0.0.1:8090/api/collections/tasks/records";
 let tasks_card_body = document.getElementById("id_task_card_body");
 tasks = [];
 
-function selectProject(event){
-    let projectName = event.currentTarget.parentElement.children[0].innerHTML
-    console.log("projectname",projectName)
-    for (let i = 0; i <tasks.length; i++){
-        if (tasks[i].project_name === projectName){
-                getTasks(tasks);
-        }
-    }
-}
-
 fetch(tasksApi)
 .then(response => response.json())
 .then(data => {
     tasks = data.items;
-    // getTasks(tasks);
 });
 
-function getTasks(tasks){
-    tasks.forEach(function (task) {
-        tasks_card_body.innerHTML += `
-        <table>
-        <tr>
-        <th>Project Name: ${task.project_name}</th>
-        <th>Task: ${task.task}</th>
-        <th>% Completed: ${task.completed_status}</th>
-        <th>Start Date: ${task.start_date}</th>
-        <th>End Date: ${task.end_date}</th>
-        </tr>
-        </table>`
-    });
+function selectProject(event){
+    let projectName = event.currentTarget.parentElement.children[0].innerHTML
+    tasks_card_body.innerHTML = "";
+    for (let i = 0; i <tasks.length; i++){
+        if (tasks[i].project_name === projectName){
+            tasks_card_body.innerHTML += `
+            <table>
+            <tr>
+            <th>Project Name: ${tasks[i].project_name}</th>
+            <th>Task: ${tasks[i].task}</th>
+            <th>% Completed: ${tasks[i].completed_status}</th>
+            <th>Start Date: ${tasks[i].start_date}</th>
+            <th>End Date: ${tasks[i].end_date}</th>
+            </tr>
+            </table>`
+        }
+    }
 }
