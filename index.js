@@ -81,3 +81,10 @@ function selectProject(event){
         }
     }
 }
+
+fetch(tasksAp, {
+    method: 'POST',
+    body: new FormData(document.querySelector('form'))
+    .then(response => response.text()) 
+    .then(data => alert(data))
+})
