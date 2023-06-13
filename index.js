@@ -46,9 +46,8 @@ function getProjects(projects){
     projects.forEach(function (project) {
         project_card_body.innerHTML += `<div class="stat-line">
         <span class="stat-name" onclick="selectProject(event)">${project.project_name}</span>
-        <span class="stat-percent">${project.project_completed}%</span>
-        <div id="progress-bar-status" style="width ${project.project_completed}%">
-        <div id="progress-bar" style="width: ${project.project_completed}%"></div>
+        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped" style="width: ${project.project_completed}%">${project.project_completed}%</div>
       </div>
         </div>`;
     });
