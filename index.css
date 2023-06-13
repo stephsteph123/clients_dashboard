@@ -2,17 +2,17 @@
   height: 100vh;
 }
 
-
-.col.col-1.one  {
-  
+.col-contact, .col-project, .col-schedule, .col-tasks, .col-progress, .col-graph{
+  padding: 2px;
 }
 
 .row.db-wrapper{
   height: 100vh;
 }
 
-.all-contact-cards{
-  margin: 4px;
+.all-contact-cards, .all-project-cards, .all-tasks-cards, .all-progress-cards, .all-schedule-cards{
+  margin: 6px;
+  /* height: 100%; */
 }
 
 .contacts-card-body{
@@ -29,4 +29,18 @@
 .progress{
   margin: 8px;
   width: 100%;
+}
+
+.row.bottom{
+  margin-top: 4px;
+}
+
+.all-contact-cards, .all-project-cards, .all-schedule-cards, .all-graph-cards{
+  height: 100%;
+}
+
+.col-graph{
+  height: 27vh;
+  padding-left: 8px;
+  padding-right: 6px;
 }
