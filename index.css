@@ -22,8 +22,21 @@
   margin: 8px;
 }
 
+#id_contact_card_body{
+  display: flex;
+}
+
+.contact-card-body{
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+}
 .contact-card{
   margin: 4px;
+}
+
+.contact-card img{
+  width: 80px;
 }
 
 .progress{

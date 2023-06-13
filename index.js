@@ -12,20 +12,22 @@ fetch(api)
 
 function getContacts(contacts) {
     contacts.forEach(function (contact) {
-        card_body.innerHTML += `<div class="avatar">
-        <button onclick="deleteMe(event)">Remove</button>
-        <img src="${contact.url}" alt="" />
-        <span class="name">${contact.name}</span>
+        card_body.innerHTML += `<div class="card contact-card">
+        <img src="${contact.url}" class="card-img-top" alt="..." />
+        <div class="card-body contact-card-body">
+            <p class="card-text">${contact.name}</p>
+        </div>
         </div>`;
     });
 }
 
-function deleteMe(event) {
-    let name = event.currentTarget.parentElement.children[2].innerHTML;
-    profiles = profiles.filter((profile) => !(profile.name === name));
-    card_body.innerHTML = "";
-    getContacts(profiles);
-}
+// function deleteMe(event) {
+//     let name = event.currentTarget.parentElement.children[2].innerHTML;
+//     profiles = profiles.filter((profile) => !(profile.name === name));
+//     card_body.innerHTML = "";
+//     getContacts(profiles);
+// }
+// <button onclick="deleteMe(event)">Remove</button>
 
 // projects
 let projectsApi = "http://127.0.0.1:8090/api/collections/projects/records/";
