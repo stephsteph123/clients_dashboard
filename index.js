@@ -56,6 +56,7 @@ function getProjects(projects){
 // tasks
 let tasksApi = "http://127.0.0.1:8090/api/collections/tasks/records";
 let tasks_card_body = document.getElementById("id_task_card_body");
+let tasks_table = document.getElementById("id_task_table");
 tasks = [];
 
 fetch(tasksApi)
@@ -64,28 +65,81 @@ fetch(tasksApi)
     tasks = data.items;
 });
 
-function selectProject(event){
-    let projectName = event.currentTarget.parentElement.children[0].innerHTML
+function selectProject(event) {
+    let projectName = event.currentTarget.parentElement.children[0].innerHTML;
     tasks_card_body.innerHTML = "";
-    for (let i = 0; i <tasks.length; i++){
-        if (tasks[i].project_name === projectName){
-            tasks_card_body.innerHTML += `
-            <table>
-            <tr>
-            <th>Project Name: ${tasks[i].project_name}</th>
-            <th>Task: ${tasks[i].task}</th>
-            <th>% Completed: ${tasks[i].completed_status}</th>
-            <th>Start Date: ${tasks[i].start_date}</th>
-            <th>End Date: ${tasks[i].end_date}</th>
-            </tr>
-            </table>`
-        }
+    tasks_table.innerHTML = `
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Status</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    `;
+  
+    let tableBody = tasks_table.querySelector("tbody");
+  
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].project_name === projectName) {
+        let tableRow = document.createElement("tr");
+        tableRow.innerHTML = `
+          <td>${tasks[i].task}</td>
+          <td>${tasks[i].completed_status}</td>
+          <td>${tasks[i].start_date}</td>
+          <td>${tasks[i].end_date}</td>
+        `;
+        tableBody.appendChild(tableRow);
+      }
     }
+  }
+
+//   Tasks Post Request
+
+let pb_task = "http://127.0.0.1:8090/api/collections/tasks/records"
+
+const recordData = {
+    collectionId: "JSON",
+    collectionName: "tasks",
+    completed_status: "open",
+    created:"",
+    end_date: "",
+    id:"",
+    project_name:"",
+    start_date: "2022-01-01 10:00:00.123Z",
+    task: "JSON",
+    updated: ""
+  };
+  
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(recordData)
+  };
+  
+  fetch(pb_task, requestOptions)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+// Task Form
+
+function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+    console.log("Form is Opened");
 }
 
-fetch(tasksAp, {
-    method: 'POST',
-    body: new FormData(document.querySelector('form'))
-    .then(response => response.text()) 
-    .then(data => alert(data))
-})
+function closeForm(){
+    document.getElementById("popupForm").style.display = "none";
+    console.log("Form is closed");
+}
