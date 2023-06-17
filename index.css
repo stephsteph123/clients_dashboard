@@ -112,11 +112,14 @@
 }
 
 .popup-content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
   background-color: #fefefe;
   margin: 100px auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 300px;
+  width: 500px;
 }
 
 .close {

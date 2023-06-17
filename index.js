@@ -63,6 +63,7 @@ fetch(tasksApi)
 .then(response => response.json())
 .then(data => {
     tasks = data.items;
+    console.log("all tasks",tasks)
 });
 
 function selectProject(event) {
@@ -76,6 +77,8 @@ function selectProject(event) {
             <th scope="col">Status</th>
             <th scope="col">Start Date</th>
             <th scope="col">End Date</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -92,45 +95,13 @@ function selectProject(event) {
           <td>${tasks[i].completed_status}</td>
           <td>${tasks[i].start_date}</td>
           <td>${tasks[i].end_date}</td>
+          <td><input type="radio" id="html" name="fav_language" value="HTML"></td>
+          <td><input type="radio" id="html" name="fav_language" value="HTML"></td>
         `;
         tableBody.appendChild(tableRow);
       }
     }
   }
-
-//   Tasks Post Request
-
-let pb_task = "http://127.0.0.1:8090/api/collections/tasks/records"
-
-const recordData = {
-    collectionId: "JSON",
-    collectionName: "tasks",
-    completed_status: "open",
-    created:"",
-    end_date: "",
-    id:"",
-    project_name:"",
-    start_date: "2022-01-01 10:00:00.123Z",
-    task: "JSON",
-    updated: ""
-  };
-  
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(recordData)
-  };
-  
-  fetch(pb_task, requestOptions)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
 
 // Task Form
 
@@ -142,4 +113,49 @@ function openForm() {
 function closeForm(){
     document.getElementById("popupForm").style.display = "none";
     console.log("Form is closed");
+}
+
+//   Tasks Post Request
+function submitForm(event) {
+    let pb_task = "http://127.0.0.1:8090/api/collections/tasks/records"
+    event.preventDefault(); 
+    var projectName = document.getElementById("project-name").value;
+    var task = document.getElementById("task").value;
+    var startDate = document.getElementById("start-date").value;
+    var endDate = document.getElementById("end-date").value;
+    console.log("task ", task);
+    console.log("projectName ", projectName);
+    console.log("start ", startDate);
+    console.log("end ", endDate);
+    closeForm();
+
+    const recordData = {
+        collectionId: "1",
+        collectionName: "tasks",
+        completed_status: "open",
+        created: "",
+        end_date: endDate,
+        id: "",
+        project_name: projectName,
+        start_date: startDate,
+        task: task,
+        updated: ""
+    };
+
+    const requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(recordData)
+    };
+
+    fetch(pb_task, requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            console.log("post tasks", data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
