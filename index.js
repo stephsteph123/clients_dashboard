@@ -10,16 +10,20 @@ fetch(api)
     getContacts(profiles);
 });
 
-function getContacts(contacts) {
-    contacts.forEach(function (contact) {
-        card_body.innerHTML += `<div class="card contact-card">
-        <img src="${contact.url}" class="card-img-top" alt="..." />
-        <div class="card-body contact-card-body">
-            <p class="card-text">${contact.name}</p>
-        </div>
-        </div>`;
-    });
-}
+(function getGetContacts(){
+    console.log("I was called");
+  })();
+
+// function getContacts(contacts) {
+//     contacts.forEach(function (contact) {
+//         card_body.innerHTML += `<div class="card contact-card">
+//         <img src="${contact.url}" class="card-img-top" alt="..." />
+//         <div class="card-body contact-card-body">
+//             <p class="card-text">${contact.name}</p>
+//         </div>
+//         </div>`;
+//     });
+// }
 
 // function deleteMe(event) {
 //     let name = event.currentTarget.parentElement.children[2].innerHTML;
