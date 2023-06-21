@@ -1,24 +1,13 @@
-import logo from './logo.svg';
+// needed to render components
+// contains the main component that defines the structure and behavior of your application
 import './App.css';
+import Contacts from './components/Contacts';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Contacts />
+    </>
   );
 }
 

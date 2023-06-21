@@ -13,7 +13,7 @@ fetch(api)
     console.log("I was called");
   })();
 
-export default function getContacts(contacts) {
+function getContacts(contacts) {
   contacts.forEach(function (contact) {
       card_body.innerHTML += `<div class="card contact-card">
       <img src="${contact.url}" class="card-img-top" alt="..." />
