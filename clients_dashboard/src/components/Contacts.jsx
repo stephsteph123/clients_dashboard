@@ -16,7 +16,6 @@ function Contacts() {
       })
       .then(data => {
         setProfiles(data.items);
-        console.log(data.items[0]);
       })
       .catch(error => {
         setError(error.message);
