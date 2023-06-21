@@ -3,12 +3,14 @@
 import './App.css';
 import Contacts from './components/Contacts';
 import Projects from './components/Projects';
+import Tasks from './components/Tasks';
 
 function App() {
   return (
     <>
     <Contacts />
     <Projects />
+    <Tasks />
     </>
   );
 }

@@ -17,7 +17,6 @@ function Projects(){
   })
   .then(data => {
     setProjects(data.items);
-    console.log(data.items)
   })
   .catch(error => {
     setError(error.message)
@@ -26,6 +25,9 @@ function Projects(){
 
   return (
     <div>
+      {error ? (
+        <div>Error: {error}</div>
+      ) : (
       <div>
         {projects.map((project, index) => (
           <div key = {index}>
@@ -34,6 +36,7 @@ function Projects(){
           </div>
         ))}
       </div>
+      )}
     </div>
   )
 }

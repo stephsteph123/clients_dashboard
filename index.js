@@ -1,6 +1,6 @@
 // contacts
 let api = "http://127.0.0.1:8090/api/collections/contacts/records/";
-let card_body = document.getElementById("id_contact_card_body");
+// let card_body = document.getElementById("id_contact_card_body");
 profiles = [];
 
 fetch(api)
