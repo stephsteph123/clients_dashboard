@@ -27,13 +27,20 @@ function Contacts() {
       {error ? (
         <div>Error: {error}</div>
       ) : (
-        <div>
+        <div class="row top">
+          <div class="col col-8 col-contact">
+          <div class="card all-contact-cards">
+          <div class="card-header">Contacts</div>
+          <div class="card-body contacts-card-body">
           {profiles.map((profile, index) => (
-            <div key={index}>
+            <div class ="contacts"key={index}>
               <div>{profile.name}</div>
               <img src={profile.url}/>
             </div>
           ))}
+        </div>
+        </div>
+        </div>
         </div>
       )}
     </div>

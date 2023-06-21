@@ -28,7 +28,7 @@ function Projects(){
       {error ? (
         <div>Error: {error}</div>
       ) : (
-      <div>
+      <div class="col col-4 col-project">
         {projects.map((project, index) => (
           <div key = {index}>
             <div>{project.project_name}</div>

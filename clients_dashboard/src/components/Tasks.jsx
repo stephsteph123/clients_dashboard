@@ -16,7 +16,6 @@ function Tasks(){
     })
     .then(data => {
       setTasks(data.items)
-      console.log(data.items)
     })
     .catch(error => {
       setError(error.message);
