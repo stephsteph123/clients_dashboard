@@ -23,12 +23,10 @@ function Contacts() {
   }, []);
 
   return (
-    <div>
+    <div class="col col-8 col-contact">
       {error ? (
         <div>Error: {error}</div>
       ) : (
-        <div class="row top">
-          <div class="col col-8 col-contact">
           <div class="card all-contact-cards">
           <div class="card-header">Contacts</div>
           <div class="card-body contacts-card-body">
@@ -38,8 +36,6 @@ function Contacts() {
               <img src={profile.url}/>
             </div>
           ))}
-        </div>
-        </div>
         </div>
         </div>
       )}

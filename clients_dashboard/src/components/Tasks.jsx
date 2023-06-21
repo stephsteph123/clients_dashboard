@@ -23,11 +23,12 @@ function Tasks(){
   }, []);
 
   return (
-    <div>
+    <div class="col col-8 col-tasks">
     {error ? (
       <div>Error: {error}</div>
     ) : (
-      <div>
+      <div class="card all-tasks-cards">
+        <div class="card-header tasks-header">Tasks
         {tasks.map((task, index) => (
           <div key={index}>
             <div>{task.task}</div>
@@ -36,6 +37,7 @@ function Tasks(){
             <div>{task.end_date}</div>
           </div>
         ))}
+      </div>
       </div>
     )}
   </div>

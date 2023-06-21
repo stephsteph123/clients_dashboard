@@ -24,17 +24,20 @@ function Projects(){
 }, []);
 
   return (
-    <div>
+    <div class="col col-4 col-project">
       {error ? (
         <div>Error: {error}</div>
       ) : (
-      <div class="col col-4 col-project">
+        <div class="card all-project-cards">
+        <div class="card-header">Projects</div>
+        <div class="card-body projects-card-body">
         {projects.map((project, index) => (
           <div key = {index}>
             <div>{project.project_name}</div>
             <div>{project.project_completed}</div>
           </div>
         ))}
+      </div>
       </div>
       )}
     </div>
