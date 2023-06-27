@@ -23,15 +23,15 @@ function Contacts() {
   }, []);
 
   return (
-    <div class="col col-8 col-contact">
+    <div className="col col-8 col-contact">
       {error ? (
         <div>Error: {error}</div>
       ) : (
-          <div class="card all-contact-cards">
-          <div class="card-header">Contacts</div>
-          <div class="card-body contacts-card-body">
+          <div className="card all-contact-cards">
+          <div className="card-header">Contacts</div>
+          <div className="card-body contacts-card-body">
           {profiles.map((profile, index) => (
-            <div class ="contacts"key={index}>
+            <div className="contacts"key={index}>
               <div>{profile.name}</div>
               <img src={profile.url}/>
             </div>

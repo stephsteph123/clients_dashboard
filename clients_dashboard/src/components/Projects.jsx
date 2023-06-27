@@ -24,17 +24,19 @@ function Projects(){
 }, []);
 
   return (
-    <div class="col col-4 col-project">
+    <div className="col col-4 col-project">
       {error ? (
         <div>Error: {error}</div>
       ) : (
-        <div class="card all-project-cards">
-        <div class="card-header">Projects</div>
-        <div class="card-body projects-card-body">
+        <div className="card all-project-cards">
+        <div className="card-header">Projects</div>
+        <div className="card-body projects-card-body">
         {projects.map((project, index) => (
-          <div key = {index}>
-            <div>{project.project_name}</div>
-            <div>{project.project_completed}</div>
+          <div className="stat-line" key = {index}>
+            <div className="stat-name" onclick="selectProject(event)">{project.project_name}</div>
+            <div className="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            <div className="progress-bar progress-bar-striped" style={{width: project.project_completed+"%"}}>{project.project_completed}%</div>
+          </div>
           </div>
         ))}
       </div>

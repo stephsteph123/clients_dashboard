@@ -23,12 +23,12 @@ function Tasks(){
   }, []);
 
   return (
-    <div class="col col-8 col-tasks">
+    <div className="col col-8 col-tasks">
     {error ? (
       <div>Error: {error}</div>
     ) : (
-      <div class="card all-tasks-cards">
-        <div class="card-header tasks-header">Tasks
+      <div className="card all-tasks-cards">
+        <div className="card-header tasks-header">Tasks
         {tasks.map((task, index) => (
           <div key={index}>
             <div>{task.task}</div>

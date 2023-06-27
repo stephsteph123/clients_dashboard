@@ -1,16 +1,13 @@
 // needed to render components
 // contains the main component that defines the structure and behavior of your application
 import './App.css';
-import Contacts from './components/Contacts';
-import Projects from './components/Projects';
-import Tasks from './components/Tasks';
+import 'bootstrap/dist/css/bootstrap.css';
+import Allcards from './components/Allcards';
 
 function App() {
   return (
     <>
-    <Contacts />
-    <Projects />
-    <Tasks />
+    <Allcards/>
     </>
   );
 }

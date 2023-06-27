@@ -1,1 +1,48 @@
 /* global CSS */
+
+.col-contact, .col-project, .col-schedule, .col-tasks, .col-progress, .col-graph{
+  padding: 2px;
+}
+
+.all-contact-cards, .all-project-cards, .all-tasks-cards, .all-progress-cards, .all-schedule-cards{
+  margin: 6px;
+}
+
+/* Contacts */
+
+.contacts-card-body{
+  display: flex;
+  overflow-y: scroll;
+  margin: 8px;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  height: 120px;
+  background-color: aquamarine;
+  border-radius: 15%;
+}
+
+.contacts div{
+  display: flex;
+  justify-content: center;
+}
+
+.contacts img{
+  width: 80px;
+}
+
+/* projects */
+
+.stat-line{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.progress{
+  margin: 8px;
+  width: 100%;
+}
