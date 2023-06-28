@@ -1,3 +1,4 @@
+import LowerCard from "./LowerCard";
 import UpperCard from "./UpperCard";
 
 function Allcards() {
@@ -8,18 +9,25 @@ function Allcards() {
           <div className="col col-1 one bg-danger"></div>
           <div className="col">
             <div className="row header">
-            <nav class="navbar bg-body-tertiary">
-                        <div className="container-fluid">
-                            <a className="navbar-brand" href="#">
-                                Bootstrap
-                            </a>
-                        </div>
-                    </nav>
-              </div>
-              <div className="row top">
-            <UpperCard />
+              <nav className="navbar bg-body-tertiary">
+                <div className="container-fluid">
+                  <a className="navbar-brand" href="#">
+                    Bootstrap
+                  </a>
+                </div>
+              </nav>
             </div>
-        </div>
+            <div className="row top">
+              <UpperCard />
+            </div>
+            <div className="row bottom">
+              <div className="col col-8">
+                <div className="row">
+                  <LowerCard />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
