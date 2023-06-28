@@ -1,27 +1,39 @@
 /* global CSS */
 
-.col-contact, .col-project, .col-schedule, .col-tasks, .col-progress, .col-graph{
+.col-contact,
+.col-project,
+.col-schedule,
+.col-tasks,
+.col-progress,
+.col-graph {
   padding: 2px;
 }
 
-.all-contact-cards, .all-project-cards, .all-tasks-cards, .all-progress-cards, .all-schedule-cards{
+.all-contact-cards,
+.all-project-cards,
+.all-tasks-cards,
+.all-progress-cards,
+.all-schedule-cards {
   margin: 6px;
 }
 
-.all-tasks-cards, .all-project-cards, .all-contact-cards{
+.all-tasks-cards,
+.all-project-cards,
+.all-contact-cards {
   height: 200px;
   overflow-y: scroll;
 }
 
 /* Contacts */
 
-.contacts-card-body{
+.contacts-card-body {
   display: flex;
   overflow-y: scroll;
-  margin: 8px;
+  margin: 4px;
+  height: 188px;
 }
 
-.contacts{
+.contacts {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -30,24 +42,34 @@
   border-radius: 15%;
 }
 
-.contacts div{
+.contacts div {
   display: flex;
   justify-content: center;
 }
 
-.contacts img{
+.contacts img {
   width: 80px;
 }
 
 /* projects */
 
-.stat-line{
+.projects-card-body {
+  overflow: scroll;
+  height: 188px;
+  margin: 4px;
+}
+
+.stat-line {
   display: flex;
   flex-direction: column;
   width: 90%;
 }
 
-.progress{
+.stat-name {
+  cursor: pointer;
+}
+
+.progress {
   margin: 8px;
   width: 100%;
 }
@@ -56,11 +78,11 @@
 
 /* Tasks Form */
 
-.dropdown-menu.show{
+.dropdown-menu.show {
   display: flex;
 }
 
-.task-close{
+.task-close {
   margin-top: 10px;
   height: 10px;
   padding: 0px;
@@ -102,24 +124,24 @@
   cursor: pointer;
 }
 
-#taskForm{
+#taskForm {
   display: flex;
   flex-direction: column;
   width: 75%;
   margin-left: 12%;
 }
 
-#taskForm input,#taskForm label{
+#taskForm input,
+#taskForm label {
   margin: 2px;
 }
 
-#taskForm #submit{
+#taskForm #submit {
   width: 25%;
   margin-top: 2px;
-
 }
 
-
-#start-date, #end-date{
-width: 40%;
+#start-date,
+#end-date {
+  width: 40%;
 }
