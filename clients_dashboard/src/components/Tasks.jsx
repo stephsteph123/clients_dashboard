@@ -1,52 +1,84 @@
 import React, { useState, useEffect } from "react";
 
 function Tasks() {
-  const [tasks, setTasks] = useState([]);
-  const [error, setError] = useState(null);
-  const [showForm, setShowForm] = useState(false);
-  const [formValues, setFormValues] = useState({
-    projectName: "",
-    task: "",
-    startDate: "",
-    endDate: "",
-  });
-
-  useEffect(() => {
-    const taskApi = "http://127.0.0.1:8090/api/collections/tasks/records/";
-
-    fetch(taskApi)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setTasks(data.items);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  }, []);
+    const [state, setState] = useState({
+      tasks: [],
+      error: null,
+      showForm: false,
+      formValues: {
+        projectName: "",
+        task: "",
+        startDate: "",
+        endDate: "",
+      },
+    });
+  
+    const { tasks, error, showForm, formValues } = state;
+  
+    useEffect(() => {
+      const taskApi = "http://127.0.0.1:8090/api/collections/tasks/records/";
+  
+      fetch(taskApi)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to fetch data");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setState((prevState) => ({
+            ...prevState,
+            tasks: data.items,
+          }));
+        })
+        .catch((error) => {
+          setState((prevState) => ({
+            ...prevState,
+            error: error.message,
+          }));
+        });
+    }, []);
 
   function openForm() {
-    setShowForm(true);
+    setState((prevState) => ({
+      ...prevState,
+      showForm: true,
+    }));
   }
 
   function closeForm() {
-    setShowForm(false);
+    setState((prevState) => ({
+      ...prevState,
+      showForm: false,
+    }));
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Form submitted:", formValues);
-    console.log("event.target", event.target);
+    console.log(event.target)
+    setState((prevState) => ({
+      ...prevState,
+      showForm: false,
+      formValues: {
+        projectName: "",
+        task: "",
+        startDate: "",
+        endDate: "",
+      },
+    }));
   }
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormValues({ ...formValues, [name]: value });
+    setState((prevState) => ({
+      ...prevState,
+      formValues: {
+        ...prevState.formValues,
+        [name]: value,
+      },
+    }));
   }
+  
 
   return (
     <div className="col col-8 col-tasks">
@@ -142,7 +174,7 @@ function Tasks() {
                 </tr>
               </thead>
             </table>
-            {tasks.map((task, index) => (
+            {state.tasks.map((task, index) => (
               <div key={index}>
                 <td>{task.task}</td>
                 <td>{task.project_name}</td>
