@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Projects from "./Projects";
 
 function Tasks() {
     const [state, setState] = useState({

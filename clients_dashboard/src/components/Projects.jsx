@@ -1,27 +1,9 @@
+// Projects.jsx
 import React, {useState, useEffect} from "react";
+import useFetchProjects from "../functions/hooks/useFetchProjects";
 
 function Projects(){
-  const [projects, setProjects] = useState([]);
-  const [error, setError] = useState(null);
-
-
-  useEffect(() => {
-  const projectsApi = "http://127.0.0.1:8090/api/collections/projects/records/";
-
-  fetch(projectsApi)
-  .then(response => {
-    if(!response.ok){
-      throw new Error('Failed to fetch data');
-    }
-    return response.json();
-  })
-  .then(data => {
-    setProjects(data.items);
-  })
-  .catch(error => {
-    setError(error.message)
-  });
-}, []);
+  const { projects, error } = useFetchProjects();
 
 function selectProject(event){
   let projectName = event.target;
@@ -30,8 +12,10 @@ function selectProject(event){
 
   return (
     <div className="col col-4 col-project">
-      {error ? (
+            {error ? (
         <div>Error: {error}</div>
+      ) : projects === null ? (
+        <div>Loading projects...</div>
       ) : (
         <div className="card all-project-cards">
         <div className="card-header">Projects</div>
