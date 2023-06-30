@@ -14,10 +14,10 @@ function useFetchTasks() {
         }
         return response.json();
       })
-      .then((data) => {
+      .then(data => {
         setTasks(data.items);
       })
-      .catch((error) => {
+      .catch(error => {
         setError(error.message);
       });
   }, []);

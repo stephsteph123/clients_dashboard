@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import useFetchTasks from "../functions/hooks/useFetchTasks";
 
 function Tasks() {
+  const{tasks, error} = useFetchTasks();
     const [state, setState] = useState({
-      tasks: [],
-      error: null,
       showForm: false,
       formValues: {
         projectName: "",
@@ -13,31 +13,7 @@ function Tasks() {
       },
     });
   
-    const { tasks, error, showForm, formValues } = state;
-  
-    useEffect(() => {
-      const taskApi = "http://127.0.0.1:8090/api/collections/tasks/records/";
-  
-      fetch(taskApi)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to fetch data");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          setState((prevState) => ({
-            ...prevState,
-            tasks: data.items,
-          }));
-        })
-        .catch((error) => {
-          setState((prevState) => ({
-            ...prevState,
-            error: error.message,
-          }));
-        });
-    }, []);
+    const { showForm, formValues } = state;
 
   function openForm() {
     setState((prevState) => ({
@@ -174,7 +150,7 @@ function Tasks() {
                 </tr>
               </thead>
             </table>
-            {state.tasks.map((task, index) => (
+            {tasks.map((task, index) => (
               <div key={index}>
                 <td>{task.task}</td>
                 <td>{task.project_name}</td>

@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import useFetchProjects from "../functions/hooks/useFetchProjects";
 
 function Projects(){
-  const { projects, error } = useFetchProjects();
+  const { projects, error } = useFetchProjects()
 
 function selectProject(event){
   let projectName = event.target;
