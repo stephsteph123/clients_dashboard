@@ -1,60 +1,19 @@
-import React, { useState, useEffect } from "react";
-import useFetchTasks from "../functions/hooks/useFetchTasks";
+import React, { useState, useEffect, useContext } from "react";
+import useFetchTasks from "../hooks/useFetchTasks";
+import useForm from "../hooks/useForm";
 
 function Tasks() {
-  const{tasks, error} = useFetchTasks();
-    const [state, setState] = useState({
-      showForm: false,
-      formValues: {
-        projectName: "",
-        task: "",
-        startDate: "",
-        endDate: "",
-      },
-    });
-  
-    const { showForm, formValues } = state;
-
-  function openForm() {
-    setState((prevState) => ({
-      ...prevState,
-      showForm: true,
-    }));
-  }
-
-  function closeForm() {
-    setState((prevState) => ({
-      ...prevState,
-      showForm: false,
-    }));
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log(event.target)
-    setState((prevState) => ({
-      ...prevState,
-      showForm: false,
-      formValues: {
-        projectName: "",
-        task: "",
-        startDate: "",
-        endDate: "",
-      }
-    }));
-  }
-
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setState((prevState) => ({
-      ...prevState,
-      formValues: {
-        ...prevState.formValues,
-        [name]: value,
-      },
-    }));
-  }
-  
+  const { tasks, error } = useFetchTasks();
+  const {
+    state,
+    setState,
+    openForm,
+    showForm,
+    formValues,
+    closeForm,
+    handleSubmit,
+    handleInputChange,
+  } = useForm();
 
   return (
     <div className="col col-8 col-tasks">
@@ -79,10 +38,9 @@ function Tasks() {
                     Create Task
                   </a>
                 </li>
-                <span
-                  className="close"
-                  onClick={closeForm}
-                >&times;</span>
+                <span className="close" onClick={closeForm}>
+                  &times;
+                </span>
               </ul>
             </div>
             <div
@@ -131,8 +89,8 @@ function Tasks() {
                   ></input>
                   <input type="submit" value="Submit" id="submit"></input>
                   <span className="close" onClick={closeForm}>
-                  &times;
-                </span>
+                    &times;
+                  </span>
                 </form>
               </div>
             </div>

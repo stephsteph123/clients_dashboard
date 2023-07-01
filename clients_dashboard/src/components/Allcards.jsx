@@ -1,9 +1,11 @@
 import LowerCard from "./LowerCard";
 import UpperCard from "./UpperCard";
+import { MyContextProvider } from "../hooks/myContext";
 
 function Allcards() {
   return (
     <>
+    <MyContextProvider/>
       <div className="container-fluid bg-primary">
         <div className="row db-wrapper">
           <div className="col col-1 one bg-danger"></div>

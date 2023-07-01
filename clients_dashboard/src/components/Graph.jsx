@@ -1,10 +1,10 @@
 // Graph.js
 import React from "react";
-import useFetchProjects from "../functions/hooks/useFetchProjects";
+import useFetchProjects from "../hooks/useFetchProjects";
 
 function Graph() {
   const { count, increment, decrement } = useFetchProjects();
-  return ((console.log("hello")))
+  return (count)
 }
 
 export default Graph;
