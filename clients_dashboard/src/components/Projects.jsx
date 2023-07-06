@@ -1,10 +1,14 @@
 // Projects.jsx
 import React, { useState, useEffect, useContext } from "react";
-import { MyContext } from "../hooks/myContext";
 import useFetchProjects from "../hooks/useFetchProjects";
 
-function Projects() {
+function Projects({ onChange }) {
   const { projects, error } = useFetchProjects();
+
+  function handleClick(event) {
+    const value = event.target.innerHTML;
+    onChange(value)
+  }
 
   return (
     <div className="col col-4 col-project">

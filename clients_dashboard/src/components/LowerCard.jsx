@@ -1,16 +1,24 @@
-// import Progress from "./Progress"
-// import Projects from "./Projects"
-// import Schedule from "./Schedule"
-import Graph from "./Graph"
-import Tasks from "./Tasks"
+import React, { useState } from "react";
+import Graph from "./Graph";
+import Tasks from "./Tasks";
 
-function LowerCard(){
+function LowerCard({valueFromUpperCard,valueFromLowerCard, onChange}) {
+  const [valueB, setValueBState] = useState("");
+
+  function handleValueBChange(newValue) {
+    setValueBState(newValue);
+    onChange(newValue)
+  }
+
   return (
-  <>
-  <Tasks/>
-  <Graph/>
-  </>
-  )
+    <>
+      <Tasks 
+      valueFromUpperCard={valueFromUpperCard}
+      valueFromLowerCard={valueFromLowerCard}
+      onChange={handleValueBChange} />
+      <Graph />
+    </>
+  );
 }
 
 export default LowerCard;

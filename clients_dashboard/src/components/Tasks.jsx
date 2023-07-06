@@ -2,11 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import useFetchTasks from "../hooks/useFetchTasks";
 import useForm from "../hooks/useForm";
 
-function Tasks() {
+function Tasks({valueFromUpperCard, onChange }) {
   const { tasks, error } = useFetchTasks();
   const {
-    state,
-    setState,
     openForm,
     showForm,
     formValues,
@@ -100,38 +98,45 @@ function Tasks() {
               <thead>
                 <tr>
                   <th scope="col">Task</th>
-                  <th scope="col">Status</th>
+                  <th scope="col">Project Name</th>
                   <th scope="col">Start Date</th>
                   <th scope="col">End Date</th>
                   <th scope="col">Edit</th>
                   <th scope="col">Delete</th>
                 </tr>
               </thead>
+              <tbody> 
+                {tasks.map((task, index) => {
+                  if (valueFromUpperCard === task.project_name) {
+                    return (
+                      <tr key={index}>
+                        <td>{task.task}</td>
+                        <td>{task.project_name}</td>
+                        <td>{task.start_date}</td>
+                        <td>{task.end_date}</td>
+                        <td>
+                          <input
+                            type="radio"
+                            id="html"
+                            name="fav_language"
+                            value="HTML"
+                          ></input>
+                                                  </td>
+                        <td>
+                          <input
+                            type="radio"
+                            id="html"
+                            name="fav_language"
+                            value="HTML"
+                          ></input>
+                        </td>
+                      </tr>
+                    );
+                  }
+                  return null;
+                })}
+              </tbody> 
             </table>
-            {tasks.map((task, index) => (
-              <div key={index}>
-                <td>{task.task}</td>
-                <td>{task.project_name}</td>
-                <td>{task.start_date}</td>
-                <td>{task.end_date}</td>
-                <td>
-                  <input
-                    type="radio"
-                    id="html"
-                    name="fav_language"
-                    value="HTML"
-                  ></input>
-                </td>
-                <td>
-                  <input
-                    type="radio"
-                    id="html"
-                    name="fav_language"
-                    value="HTML"
-                  ></input>
-                </td>
-              </div>
-            ))}
           </div>
         </div>
       )}

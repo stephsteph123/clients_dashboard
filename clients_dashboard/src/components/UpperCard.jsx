@@ -1,11 +1,19 @@
+import React, { useState } from "react";
 import Contacts from './Contacts';
 import Projects from './Projects';
 
-function UpperCard() {
+function UpperCard({onChange}) {
+  const [valueA, setValueAState] = useState("");
+
+  function handleValueAChange(newValue) {
+    setValueAState(newValue);
+    onChange(newValue)
+  }
+
   return (
     <>
     <Contacts />
-    <Projects />
+    <Projects onChange={handleValueAChange}/>
     </>
   );
 }

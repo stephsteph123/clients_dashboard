@@ -1,11 +1,18 @@
+import React, { useEffect, useState } from "react";
 import LowerCard from "./LowerCard";
 import UpperCard from "./UpperCard";
-import { MyContextProvider } from "../hooks/myContext";
 
-function Allcards() {
+function Allcards({newValue}) {
+  const [valueFromUpperCard, setValueFromUpperCard] = useState("");
+  const [valueFromLowerCard, setValueFromLowerCard] = useState("");
+
+  function handleValueFromUpperCardChange(newValue) {
+    setValueFromUpperCard(newValue);
+    setValueFromLowerCard(newValue); 
+  }
+
   return (
     <>
-    <MyContextProvider/>
       <div className="container-fluid bg-primary">
         <div className="row db-wrapper">
           <div className="col col-1 one bg-danger"></div>
@@ -20,12 +27,16 @@ function Allcards() {
               </nav>
             </div>
             <div className="row top">
-              <UpperCard />
+              <UpperCard onChange={handleValueFromUpperCardChange}/>
             </div>
             <div className="row bottom">
               <div className="col col-8">
                 <div className="row">
-                  <LowerCard />
+                  <LowerCard
+                  onChange={handleValueFromUpperCardChange}
+                  valueFromUpperCard={valueFromUpperCard}
+                  valueFromLowerCard={valueFromLowerCard}
+                  />
                 </div>
               </div>
             </div>
