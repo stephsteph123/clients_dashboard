@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import useFetchTasks from "../hooks/useFetchTasks";
 import useForm from "../hooks/useForm";
+import "../index.css";
 
-function Tasks({valueFromUpperCard, onChange }) {
+function Tasks({ valueFromUpperCard, onChange }) {
   const { tasks, error } = useFetchTasks();
   const {
     openForm,
@@ -21,9 +22,10 @@ function Tasks({valueFromUpperCard, onChange }) {
         <div className="card all-tasks-cards">
           <div className="card-header tasks-header">
             Tasks
-            <div className="btn-group">
+            <div className="btn-group btn-light task-form-dropdown">
               <button
-                className="btn btn-sm dropdown-toggle"
+                id="dropdown-dots"
+                className="btn"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -95,37 +97,35 @@ function Tasks({valueFromUpperCard, onChange }) {
           </div>
           <div className="card-body tasks-card-body">
             <table className="table table-hover align-middle">
-              <thead>
-                <tr>
-                  <th scope="col">Task</th>
-                  <th scope="col">Project Name</th>
-                  <th scope="col">Start Date</th>
-                  <th scope="col">End Date</th>
-                  <th scope="col">Edit</th>
-                  <th scope="col">Delete</th>
+              <tbody>
+                <tr className="table-light">
+                  <td>Task</td>
+                  <td>Project Name</td>
+                  <td>Start Date</td>
+                  <td>End Date</td>
+                  <td>Edit</td>
+                  <td>Delete</td>
                 </tr>
-              </thead>
-              <tbody> 
                 {tasks.map((task, index) => {
                   if (valueFromUpperCard === task.project_name) {
                     return (
                       <tr key={index}>
                         <td>{task.task}</td>
                         <td>{task.project_name}</td>
-                        <td>{task.start_date}</td>
-                        <td>{task.end_date}</td>
+                        <td>{task.start_date.slice(0, 11)}</td>
+                        <td>{task.end_date.slice(0, 11)}</td>
                         <td>
                           <input
                             type="radio"
-                            id="html"
+                            id="edit"
                             name="fav_language"
                             value="HTML"
                           ></input>
-                                                  </td>
+                        </td>
                         <td>
                           <input
                             type="radio"
-                            id="html"
+                            id="delete"
                             name="fav_language"
                             value="HTML"
                           ></input>
@@ -135,7 +135,7 @@ function Tasks({valueFromUpperCard, onChange }) {
                   }
                   return null;
                 })}
-              </tbody> 
+              </tbody>
             </table>
           </div>
         </div>

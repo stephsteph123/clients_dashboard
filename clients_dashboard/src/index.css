@@ -145,3 +145,12 @@
 #end-date {
   width: 40%;
 }
+
+.tasks-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+#dropdown-dots{
+  border-radius: 10%;
+}
