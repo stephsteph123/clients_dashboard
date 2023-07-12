@@ -154,3 +154,7 @@
 #dropdown-dots{
   border-radius: 10%;
 }
+
+.lowerCard{
+  display: flex;
+}

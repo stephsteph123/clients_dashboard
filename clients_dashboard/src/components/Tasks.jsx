@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 import useFetchTasks from "../hooks/useFetchTasks";
 import useForm from "../hooks/useForm";
 import "../index.css";
 
-function Tasks({ valueFromUpperCard, onChange }) {
+function Tasks({ valueFromUpperCard }) {
   const { tasks, error } = useFetchTasks();
   const {
     openForm,
@@ -38,9 +38,6 @@ function Tasks({ valueFromUpperCard, onChange }) {
                     Create Task
                   </a>
                 </li>
-                <span className="close" onClick={closeForm}>
-                  &times;
-                </span>
               </ul>
             </div>
             <div
@@ -101,6 +98,7 @@ function Tasks({ valueFromUpperCard, onChange }) {
                 <tr className="table-light">
                   <td>Task</td>
                   <td>Project Name</td>
+                  <td>Status</td>
                   <td>Start Date</td>
                   <td>End Date</td>
                   <td>Edit</td>
@@ -112,6 +110,7 @@ function Tasks({ valueFromUpperCard, onChange }) {
                       <tr key={index}>
                         <td>{task.task}</td>
                         <td>{task.project_name}</td>
+                        <td>{task.completed_status}</td>
                         <td>{task.start_date.slice(0, 11)}</td>
                         <td>{task.end_date.slice(0, 11)}</td>
                         <td>

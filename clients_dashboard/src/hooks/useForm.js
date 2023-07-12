@@ -30,7 +30,7 @@ function useForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(event.target)
+    let submit = event.target.innerHTML
     setState((prevState) => ({
       ...prevState,
       showForm: false,
@@ -41,6 +41,7 @@ function useForm() {
         endDate: "",
       }
     }));
+    return submit;
   }
 
   function handleInputChange(event) {

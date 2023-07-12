@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Graph from "./Graph";
 import Tasks from "./Tasks";
+import Progress from "./Progress";
 
 function LowerCard({valueFromUpperCard,valueFromLowerCard, onChange}) {
   const [valueB, setValueBState] = useState("");
@@ -12,11 +13,15 @@ function LowerCard({valueFromUpperCard,valueFromLowerCard, onChange}) {
 
   return (
     <>
+    <div className="lowerCard">
       <Tasks 
       valueFromUpperCard={valueFromUpperCard}
-      valueFromLowerCard={valueFromLowerCard}
       onChange={handleValueBChange} />
+      <Progress valueFromUpperCard={valueFromUpperCard}
+      onChange={handleValueBChange}
+      />
       <Graph />
+      </div>
     </>
   );
 }
