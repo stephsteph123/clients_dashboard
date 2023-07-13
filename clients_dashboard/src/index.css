@@ -146,15 +146,44 @@
   width: 40%;
 }
 
-.tasks-header{
+.tasks-header {
   display: flex;
   justify-content: space-between;
 }
 
-#dropdown-dots{
+#dropdown-dots {
   border-radius: 10%;
 }
 
-.lowerCard{
+.lowerCard {
   display: flex;
+}
+
+/* donut */
+.donut-graph-text {
+  font: 16px/1.4em 'Source Sans Pro', sans-serif;
+  fill: #000;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+}
+
+.chart-number {
+  font-size: .6em;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
+}
+
+.chart-label {
+  font-size: .2em;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translate(0.7em);
+  transform: translateY(0.7em);
 }
