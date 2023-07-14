@@ -21,58 +21,66 @@ function Progress({ valueFromUpperCard }) {
   let total = closedVal + openVal;
   let closedPercentage = (closedVal / total) * 100;
   let openPercentage = Math.round((openVal / total) * 100);
-  let strokeDash = `${openPercentage} 180`
+  let strokeDash = `${openPercentage} 180`;
 
   return (
     <div className="col col-4 col-progress">
       <div className="card all-progress-cards">
         <div className="card-header tasks-header">Progress</div>
         <div className="card-body progress-card-body"></div>
-        {closedPercentage || openPercentage ? <></> : <div></div>}
-        <div class="donut-graph-section" aria-label="graphs of hiring metrics">
-          <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 42 42"
-            class="donut"
-            aria-label="donut graph for number of applicants"
-          >
-            <circle
-              class="donut-hole"
-              cx="21"
-              cy="21"
-              r="15.91549430918954"
-              fill="#fff"
-            ></circle>
-            <circle
-              class="donut-ring"
-              cx="21"
-              cy="21"
-              r="15.91549430918954"
-              fill="transparent"
-              stroke="#d2d3d4"
-              stroke-width="4"
-            ></circle>
-            <circle
-              class="donut-segment"
-              cx="21"
-              cy="21"
-              r="15.91549430918954"
-              fill="transparent"
-              stroke="#8DC7CD"
-              stroke-width="4"
-              stroke-dasharray={strokeDash}
-            ></circle>
-            <g class="donut-graph-text-one">
-              <text x="50%" y="50%" class="chart-number">
-                120
-              </text>
-              <text x="50%" y="50%" class="chart-label">
-                APPLICANTS
-              </text>
-            </g>
-          </svg>
-        </div>
+        {closedPercentage || openPercentage ? (
+          <>
+            <div
+              class="donut-graph-section"
+              aria-label="graphs of hiring metrics"
+            >
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 42 42"
+                class="donut"
+                aria-label="donut graph for number of applicants"
+              >
+                <circle
+                  class="donut-hole"
+                  cx="21"
+                  cy="21"
+                  r="15.91549430918954"
+                  fill="#fff"
+                ></circle>
+                <circle
+                  class="donut-ring"
+                  cx="21"
+                  cy="21"
+                  r="15.91549430918954"
+                  fill="transparent"
+                  stroke="#d2d3d4"
+                  stroke-width="4"
+                ></circle>
+                <circle
+                  class="donut-segment"
+                  cx="21"
+                  cy="21"
+                  r="15.91549430918954"
+                  fill="transparent"
+                  stroke="#8DC7CD"
+                  stroke-width="4"
+                  stroke-dasharray={strokeDash}
+                ></circle>
+                <g class="donut-graph-text-one">
+                  <text x="50%" y="50%" class="chart-label1">
+                    Closed: {closedVal}
+                  </text>
+                  <text x="50%" y="50%" class="chart-label2">
+                    Open: {openVal}
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </>
+        ) : (
+        <div></div>
+        )}
       </div>
     </div>
   );

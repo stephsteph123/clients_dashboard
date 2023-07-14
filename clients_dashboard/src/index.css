@@ -19,7 +19,8 @@
 
 .all-tasks-cards,
 .all-project-cards,
-.all-contact-cards {
+.all-contact-cards,
+.all-schedule-cards {
   height: 200px;
   overflow-y: scroll;
 }
@@ -159,7 +160,7 @@
   display: flex;
 }
 
-/* donut */
+/* progress donut */
 .donut-graph-text {
   font: 16px/1.4em 'Source Sans Pro', sans-serif;
   fill: #000;
@@ -169,8 +170,8 @@
   transform: translateY(0.25em);
 }
 
-.chart-number {
-  font-size: .6em;
+.chart-label1 {
+  font-size: .2em;
   line-height: 1;
   text-anchor: middle;
   -moz-transform: translateY(-0.25em);
@@ -179,7 +180,7 @@
   transform: translateY(-0.25em);
 }
 
-.chart-label {
+.chart-label2 {
   font-size: .2em;
   text-anchor: middle;
   -moz-transform: translateY(0.7em);
@@ -187,3 +188,5 @@
   -webkit-transform: translate(0.7em);
   transform: translateY(0.7em);
 }
+
+/* schedule */

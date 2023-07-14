@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import LowerCard from "./LowerCard";
 import UpperCard from "./UpperCard";
+import Schedule from "./Schedule";
 
-function Allcards({newValue}) {
+function Allcards({ newValue }) {
   const [valueFromUpperCard, setValueFromUpperCard] = useState("");
   const [valueFromLowerCard, setValueFromLowerCard] = useState("");
 
   function handleValueFromUpperCardChange(newValue) {
     setValueFromUpperCard(newValue);
-    setValueFromLowerCard(newValue); 
+    setValueFromLowerCard(newValue);
   }
 
   return (
@@ -27,22 +28,27 @@ function Allcards({newValue}) {
               </nav>
             </div>
             <div className="row top">
-              <UpperCard onChange={handleValueFromUpperCardChange}/>
+              <UpperCard onChange={handleValueFromUpperCardChange} />
             </div>
             <div className="row bottom">
               <div className="col col-8">
                 <div className="row">
                   <LowerCard
-                  onChange={handleValueFromUpperCardChange}
-                  valueFromUpperCard={valueFromUpperCard}
-                  valueFromLowerCard={valueFromLowerCard}
+                    onChange={handleValueFromUpperCardChange}
+                    valueFromUpperCard={valueFromUpperCard}
+                    valueFromLowerCard={valueFromLowerCard}
                   />
+                </div>
+              </div>
+              <div className="col col-4 col-schedule">
+                <div className="row">
+                    <Schedule />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
