@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LowerCard from "./LowerCard";
 import UpperCard from "./UpperCard";
 import Schedule from "./Schedule";
+import Graph from "./Graph";
 
 function Allcards({ newValue }) {
   const [valueFromUpperCard, setValueFromUpperCard] = useState("");
@@ -31,7 +32,7 @@ function Allcards({ newValue }) {
               <UpperCard onChange={handleValueFromUpperCardChange} />
             </div>
             <div className="row bottom">
-              <div className="col col-8">
+              <div className="col col-12">
                 <div className="row">
                   <LowerCard
                     onChange={handleValueFromUpperCardChange}
@@ -40,9 +41,16 @@ function Allcards({ newValue }) {
                   />
                 </div>
               </div>
-              <div className="col col-4 col-schedule">
+              {/* <div className="col col-4 col-schedule">
                 <div className="row">
                     <Schedule />
+                  </div>
+                </div> */}
+                <div className="col col-12">
+                  <div className="row">
+                    <Graph
+                    valueFromUpperCard={valueFromUpperCard}
+                    />
                   </div>
                 </div>
               </div>

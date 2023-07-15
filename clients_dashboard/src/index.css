@@ -13,7 +13,8 @@
 .all-project-cards,
 .all-tasks-cards,
 .all-progress-cards,
-.all-schedule-cards {
+.all-schedule-cards,
+.all-graph-cards {
   margin: 6px;
 }
 
@@ -22,6 +23,16 @@
 .all-contact-cards,
 .all-schedule-cards {
   height: 200px;
+  overflow-y: scroll;
+}
+
+.all-progress-cards{
+  height: 200px;
+}
+
+.all-graph-cards,
+.graph {
+  height: 60%;
   overflow-y: scroll;
 }
 
@@ -52,10 +63,22 @@
   width: 80px;
 }
 
+.progress-card-body {
+  padding: 0%;
+}
+
 /* projects */
 
-.projects-card-body {
+.projects-card-body,
+.tasks-card-body,
+.schedule-card-body,
+.graph-card-body {
   overflow: scroll;
+  height: 188px;
+  margin: 4px;
+}
+
+.progress-card-body{
   height: 188px;
   margin: 4px;
 }
@@ -153,6 +176,7 @@
 }
 
 #dropdown-dots {
+  padding: 2%;
   border-radius: 10%;
 }
 
@@ -162,7 +186,7 @@
 
 /* progress donut */
 .donut-graph-text {
-  font: 16px/1.4em 'Source Sans Pro', sans-serif;
+  font: 16px/1.4em "Source Sans Pro", sans-serif;
   fill: #000;
   -moz-transform: translateY(0.25em);
   -ms-transform: translateY(0.25em);
@@ -171,7 +195,7 @@
 }
 
 .chart-label1 {
-  font-size: .2em;
+  font-size: 0.2em;
   line-height: 1;
   text-anchor: middle;
   -moz-transform: translateY(-0.25em);
@@ -181,7 +205,7 @@
 }
 
 .chart-label2 {
-  font-size: .2em;
+  font-size: 0.2em;
   text-anchor: middle;
   -moz-transform: translateY(0.7em);
   -ms-transform: translateY(0.7em);
@@ -190,3 +214,5 @@
 }
 
 /* schedule */
+
+/* graph */

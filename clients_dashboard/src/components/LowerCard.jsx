@@ -20,7 +20,6 @@ function LowerCard({valueFromUpperCard,valueFromLowerCard, onChange}) {
       <Progress valueFromUpperCard={valueFromUpperCard}
       onChange={handleValueBChange}
       />
-      <Graph />
       </div>
     </>
   );
