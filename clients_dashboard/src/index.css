@@ -71,10 +71,15 @@
 
 .projects-card-body,
 .tasks-card-body,
-.schedule-card-body,
-.graph-card-body {
+.schedule-card-body {
   overflow: scroll;
   height: 188px;
+  margin: 4px;
+}
+
+.graph-card-body{
+  overflow-x: scroll;
+  height: 178px;
   margin: 4px;
 }
 
@@ -195,7 +200,7 @@
 }
 
 .chart-label1 {
-  font-size: 0.2em;
+  font-size: 0.15em;
   line-height: 1;
   text-anchor: middle;
   -moz-transform: translateY(-0.25em);
@@ -205,7 +210,7 @@
 }
 
 .chart-label2 {
-  font-size: 0.2em;
+  font-size: 0.15em;
   text-anchor: middle;
   -moz-transform: translateY(0.7em);
   -ms-transform: translateY(0.7em);
@@ -216,3 +221,62 @@
 /* schedule */
 
 /* graph */
+
+
+/* test */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.donut-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+.donut-chart .donut-hole {
+  background-color: #fff;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.donut-chart .donut-ring {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 25px solid #ccc;
+  border-bottom-color: transparent;
+}
+
+.donut-chart .donut-segment {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 25px solid #8DC7CD;
+  border-bottom-color: transparent;
+  animation: donut-rotate 2s infinite linear;
+}
+
+@keyframes donut-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

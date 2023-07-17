@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Graph from "./Graph";
 import Tasks from "./Tasks";
 import Progress from "./Progress";
 
