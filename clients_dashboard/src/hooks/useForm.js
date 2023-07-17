@@ -30,7 +30,32 @@ function useForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let submit = event.target.innerHTML
+
+    const { projectName, task, startDate, endDate, completed_status } = state.formValues;
+    const data = {
+      project_name: projectName,
+      task: task,
+      start_date: startDate,
+      end_date: endDate,
+      completed_status: "Open"
+    };
+  
+    fetch('http://127.0.0.1:8090/api/collections/tasks/records/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+      .then(responseData => {
+        console.log('API response:', responseData);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  
+    // Reset the form values and update state
     setState((prevState) => ({
       ...prevState,
       showForm: false,
@@ -38,10 +63,9 @@ function useForm() {
         projectName: "",
         task: "",
         startDate: "",
-        endDate: "",
+        endDate: ""
       }
     }));
-    return submit;
   }
 
   function handleInputChange(event) {
