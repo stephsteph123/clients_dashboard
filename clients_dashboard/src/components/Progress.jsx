@@ -65,10 +65,10 @@ function Progress({ valueFromUpperCard }) {
                     stroke-dasharray={strokeDash}
                   ></circle>
                   <g class="donut-graph-text-one">
-                    <text x="49%" y="40%" class="chart-label1">
+                    <text x="49%" y="45%" class="chart-label1">
                       Closed: {closedVal}
                     </text>
-                    <text x="49%" y="43%" class="chart-label2">
+                    <text x="49%" y="47%" class="chart-label2">
                       Open: {openVal}
                     </text>
                   </g>

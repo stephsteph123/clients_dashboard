@@ -18,7 +18,7 @@ function Allcards({ newValue }) {
       <div className="container-fluid bg-primary">
         <div className="row db-wrapper">
           <div className="col col-1 one bg-danger"></div>
-          <div className="col">
+          <div className="col" style={{height: "100vh"}}>
             <div className="row header">
               <nav className="navbar bg-body-tertiary">
                 <div className="container-fluid">
