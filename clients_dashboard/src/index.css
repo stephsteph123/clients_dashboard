@@ -78,7 +78,6 @@
 }
 
 .graph-card-body{
-  overflow-x: scroll;
   height: 178px;
   margin: 4px;
 }

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import useFetchTasks from "../hooks/useFetchTasks";
 
 function Graph({ valueFromUpperCard }) {
-  // initize y
-  let y = 1;
+  // initize x
+  let x = 0;
 
   // fetchTasks
   const { tasks, error } = useFetchTasks();
@@ -29,15 +29,11 @@ function Graph({ valueFromUpperCard }) {
       <div className="graph">
         <div className="card all-graph-cards">
           <div className="card-header">Graph</div>
-          <div className="card-body graph-card-body">
-            <div
-              className="line-graph-section"
-              aria-label="graphs of timeline metrics"
-            >
+          <div className="card-body graph-card-body" aria-label="graphs of timeline metrics">
               <svg
-                width="90%"
+                width="100%"
                 height="100%"
-                viewBox="0 0 42 42"
+                viewBox="0 0 80 7"
                 className="line-graph"
                 aria-label="line graph for timeline"
               >
@@ -45,8 +41,8 @@ function Graph({ valueFromUpperCard }) {
                   if (valueFromUpperCard === task.project_name) {
                     const formattedStart = task.start_date.slice(5, 11);
                     const formattedEnd = task.end_date.slice(5, 11);
-                    const dy = `${y}em`;
-                    y += 5;
+                    const dy = `${x}em`;
+                    x += 5;
                     return (
                       <>
                         <g
@@ -54,16 +50,16 @@ function Graph({ valueFromUpperCard }) {
                           onMouseEnter={() => handleCircleHover(index)}
                           onMouseLeave={handleCircleLeave}
                         >
-                          <circle cx={y} cy={2} r={1} fill={task.completed_status==="Closed"? "#d2d3d4": "#8DC7CD"} />
+                          <circle cx={x} cy={2} r={1} fill={task.completed_status==="Closed"? "#d2d3d4": "#8DC7CD"} />
                           {hoveredCircle === index && (
-                            <text x={y - 1} y={3} fontSize={0.7}>
-                              <tspan x={y - 2} dy={1}>
+                            <text x={x - 1} y={3} fontSize={0.7}>
+                              <tspan x={x - 2} dy={1}>
                                 Task: {task.task}
                               </tspan>
-                              <tspan x={y - 2} dy={1}>
+                              <tspan x={x - 2} dy={1}>
                                 Start Date: {formattedStart}
                               </tspan>
-                              <tspan x={y - 2} dy={1}>
+                              <tspan x={x - 2} dy={1}>
                                 End Date: {formattedEnd}
                               </tspan>
                             </text>
@@ -78,7 +74,6 @@ function Graph({ valueFromUpperCard }) {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }
