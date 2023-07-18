@@ -17,12 +17,13 @@ function Allcards({ newValue }) {
     <>
       <div className="container-fluid bg-primary">
         <div className="row db-wrapper" style={{ backgroundColor: '#DAFFFB' }}>
-        <div className="col col-1" style={{ backgroundColor: '#176B87' }}></div>
+        <div className="col col-1" style={{ backgroundColor: '#176B87' }}>
+        </div>
           <div className="col col-11" style={{height: "100vh"}}>
             <div className="row header">
               <nav className="navbar" style={{ backgroundColor: '#001C30' }}>
                 <div className="container-fluid">
-                  <a className="navbar-brand" href="#">
+                  <a className="navbar-brand" href="#" style={{color: '#176B87'}}>
                     Client Dashboard
                   </a>
                 </div>

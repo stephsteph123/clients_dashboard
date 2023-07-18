@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Client Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
+The objective of this project is to create a generic dashboard based on a mock-up design. The project will be developed in multiple steps, with each step adding new layers of functionality and technology. The ultimate goal is to update the dashboard for a specific purpose, such as project management, and iterate on the features and design.
 
-## Available Scripts
+## Approach
+The project will be developed step-by-step, allowing for a gradual strengthening of skills in HTML, JavaScript, CSS, and Bootstrap. The following approach will be followed:
 
-In the project directory, you can run:
+1. **Step 1 - Generic Dashboard**: The initial step involves creating a generic dashboard based on a provided mock-up design. This step focuses on building a foundational understanding of HTML, JavaScript, CSS, and Bootstrap to create the desired layout and components.
 
-### `npm start`
+![Mock Up Leveraged](clients_dashboard/dashboard_mock.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Step 2 - Specific Purpose**: Once the generic dashboard is completed, the next step involves updating the dashboard for a specific purpose. In this case, the objective is to transform it into a project management dashboard. This step will introduce additional features and functionality specific to project management.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Project Management Dashboard](clients_dashboard/Dashboard 2023-07-17.png)
 
-### `npm test`
+3. **Iteration and Enhancement**: After achieving the project management dashboard, the development process will enter an iterative phase. Feedback and user testing will be used to enhance the dashboard, improve its usability, and refine the design. Further iterations may involve adding new features, optimizing performance, and addressing any identified issues.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Current Stack
+The project utilizes the following technologies and tools:
 
-### `npm run build`
+- **Database**: Pocketbase
+- **Language**: JavaScript
+- **Front-end Framework**: React
+- **CSS Framework**: Bootstrap
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project leverages the power and flexibility of JavaScript as the primary programming language. React is used as the front-end framework, enabling the creation of reusable and modular components. Bootstrap is employed as the CSS framework, providing a responsive and visually appealing design.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+As the project progresses, additional technologies and tools may be incorporated to enhance the functionality and user experience of the dashboard.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
+To run the Client Dashboard project locally, please follow these steps:
 
-### `npm run eject`
+1. Clone the repository: `git clone https://github.com/your-username/client-dashboard.git`
+2. Install the project dependencies: `npm install`
+3. Start the development server: `npm start`
+4. Access the dashboard in your browser at: `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ensure that you have the necessary dependencies, including Node.js and npm, installed on your machine.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contribution
+Contributions to the Client Dashboard project are welcome. If you have suggestions, bug reports, or would like to contribute code, please follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Fork the repository.
+2. Create a new branch for your contribution: `git checkout -b feature/your-feature`
+3. Make your changes and commit them: `git commit -m 'Add your feature'`
+4. Push to your branch: `git push origin feature/your-feature`
+5. Open a pull request with a detailed description of your changes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Please ensure that your contributions align with the project's objectives and follow the established coding conventions.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the [MIT License](LICENSE). Feel free to modify and use the code according to the terms of the license.
