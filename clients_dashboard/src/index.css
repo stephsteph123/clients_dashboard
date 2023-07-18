@@ -1,0 +1,219 @@
+/* global CSS */
+
+.col-contact,
+.col-project,
+.col-schedule,
+.col-tasks,
+.col-progress,
+.col-graph {
+  padding: 2px;
+}
+
+.all-contact-cards,
+.all-project-cards,
+.all-tasks-cards,
+.all-progress-cards,
+.all-schedule-cards,
+.all-graph-cards {
+  margin: 6px;
+}
+
+.all-tasks-cards,
+.all-project-cards,
+.all-contact-cards,
+.all-schedule-cards {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.all-progress-cards{
+  height: 200px;
+}
+
+.all-graph-cards,
+.graph {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+/* Contacts */
+
+.contacts-card-body {
+  display: flex;
+  overflow-y: scroll;
+  margin: 4px;
+  height: 188px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  height: 120px;
+  border-radius: 15%;
+}
+
+.contacts div {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts img {
+  width: 80px;
+}
+
+.progress-card-body {
+  padding: 0%;
+}
+
+/* projects */
+
+.projects-card-body,
+.tasks-card-body,
+.schedule-card-body {
+  overflow: scroll;
+  height: 188px;
+  margin: 4px;
+}
+
+.graph-card-body{
+  height: 178px;
+  margin: 4px;
+}
+
+.progress-card-body{
+  height: 188px;
+  margin: 4px;
+}
+
+.stat-line {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.stat-name {
+  cursor: pointer;
+}
+
+.progress {
+  margin: 8px;
+  width: 100%;
+}
+
+/* Tasks */
+
+/* Tasks Form */
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.task-close {
+  margin-top: 10px;
+  height: 10px;
+  padding: 0px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  background-color: #fefefe;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#taskForm {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 12%;
+}
+
+#taskForm input,
+#taskForm label {
+  margin: 2px;
+}
+
+#taskForm #submit {
+  width: 25%;
+  margin-top: 2px;
+}
+
+#start-date,
+#end-date {
+  width: 40%;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#dropdown-dots {
+  padding: 2%;
+  border-radius: 10%;
+}
+
+.lowerCard {
+  display: flex;
+}
+
+/* progress donut */
+.donut-graph-text {
+  font: 16px/1.4em "Source Sans Pro", sans-serif;
+  fill: #000;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
+}
+
+.chart-label1 {
+  font-size: 0.15em;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
+  -webkit-transform: translateY(-0.25em);
+  transform: translateY(-0.25em);
+}
+
+.chart-label2 {
+  font-size: 0.15em;
+  text-anchor: middle;
+  -moz-transform: translateY(0.7em);
+  -ms-transform: translateY(0.7em);
+  -webkit-transform: translate(0.7em);
+  transform: translateY(0.7em);
+}
+
+/* schedule */
