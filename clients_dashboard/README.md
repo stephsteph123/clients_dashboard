@@ -8,7 +8,7 @@ The project will be developed step-by-step, allowing for a gradual strengthening
 
 1. **Step 1 - Generic Dashboard**: The initial step involves creating a generic dashboard based on a provided mock-up design. This step focuses on building a foundational understanding of HTML, JavaScript, CSS, and Bootstrap to create the desired layout and components.
 
-![Mock-Up Leveraged](dashboard_mock.jpeg)
+![Mock-Up Leveraged](dashboard_mock.png)
 
 2. **Step 2 - Specific Purpose**: Once the generic dashboard is completed, the next step involves updating the dashboard for a specific purpose. In this case, the objective is to transform it into a project management dashboard. This step will introduce additional features and functionality specific to project management.
 
