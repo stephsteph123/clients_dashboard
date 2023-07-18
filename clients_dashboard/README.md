@@ -12,7 +12,7 @@ The project will be developed step-by-step, allowing for a gradual strengthening
 
 2. **Step 2 - Specific Purpose**: Once the generic dashboard is completed, the next step involves updating the dashboard for a specific purpose. In this case, the objective is to transform it into a project management dashboard. This step will introduce additional features and functionality specific to project management.
 
-![ProjectManagementDashboard](Dashboard_2023-07-17.png)
+![Project_Management_Dashboard](Dashboard_2023-07-17.png)
 
 3. **Iteration and Enhancement**: After achieving the project management dashboard, the development process will enter an iterative phase. Feedback and user testing will be used to enhance the dashboard, improve its usability, and refine the design. Further iterations may involve adding new features, optimizing performance, and addressing any identified issues.
 
