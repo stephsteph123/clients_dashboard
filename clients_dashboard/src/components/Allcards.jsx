@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import LowerCard from "./LowerCard";
 import UpperCard from "./UpperCard";
 import Schedule from "./Schedule";
@@ -16,14 +16,14 @@ function Allcards({ newValue }) {
   return (
     <>
       <div className="container-fluid bg-primary">
-        <div className="row db-wrapper">
-          <div className="col col-1 one bg-danger"></div>
-          <div className="col" style={{height: "100vh"}}>
+        <div className="row db-wrapper" style={{ backgroundColor: '#DAFFFB' }}>
+        <div className="col col-1" style={{ backgroundColor: '#176B87' }}></div>
+          <div className="col col-11" style={{height: "100vh"}}>
             <div className="row header">
-              <nav className="navbar bg-body-tertiary">
+              <nav className="navbar" style={{ backgroundColor: '#001C30' }}>
                 <div className="container-fluid">
                   <a className="navbar-brand" href="#">
-                    Bootstrap
+                    Client Dashboard
                   </a>
                 </div>
               </nav>

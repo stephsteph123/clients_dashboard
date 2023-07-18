@@ -60,7 +60,7 @@ function Progress({ valueFromUpperCard }) {
                     cy="9"
                     r="8"
                     fill="transparent"
-                    stroke="#8DC7CD"
+                    stroke="#64CCC5"
                     stroke-width="2"
                     stroke-dasharray={strokeDash}
                   ></circle>

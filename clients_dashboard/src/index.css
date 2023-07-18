@@ -50,7 +50,6 @@
   flex-direction: column;
   margin: 10px;
   height: 120px;
-  background-color: aquamarine;
   border-radius: 15%;
 }
 
@@ -218,64 +217,3 @@
 }
 
 /* schedule */
-
-/* graph */
-
-
-/* test */
-.chart-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-}
-
-.donut-chart {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #f3f3f3;
-  position: relative;
-}
-
-.donut-chart .donut-hole {
-  background-color: #fff;
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.donut-chart .donut-ring {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 25px solid #ccc;
-  border-bottom-color: transparent;
-}
-
-.donut-chart .donut-segment {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 25px solid #8DC7CD;
-  border-bottom-color: transparent;
-  animation: donut-rotate 2s infinite linear;
-}
-
-@keyframes donut-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

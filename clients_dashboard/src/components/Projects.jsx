@@ -34,8 +34,8 @@ function Projects({ onChange }) {
                   aria-valuemax="100"
                 >
                   <div
-                    className="progress-bar progress-bar-striped"
-                    style={{ width: project.project_completed + "%" }}
+                    className="progress-bar"
+                    style={{ width: project.project_completed + "%" , backgroundColor: '#64CCC5'}}
                   >
                     {project.project_completed}%
                   </div>
