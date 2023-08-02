@@ -50,7 +50,7 @@ function Graph({ valueFromUpperCard }) {
                           onMouseEnter={() => handleCircleHover(index)}
                           onMouseLeave={handleCircleLeave}
                         >
-                          <circle cx={x} cy={2} r={1} fill={task.completed_status==="Closed"? "#d2d3d4": "#64CCC5"} />
+                          <circle cx={x} cy={2} r={1} fill={task.completed_status==="Closed"? "#0091D5": "#EA6A47"} />
                           {hoveredCircle === index && (
                             <text x={x - 1} y={3} fontSize={0.7}>
                               <tspan x={x - 2} dy={1}>

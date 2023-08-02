@@ -21,8 +21,8 @@ function Projects({ onChange }) {
           <div className="card-header">Projects</div>
           <div className="card-body projects-card-body">
             {projects.map((project, index) => (
-              <div className="stat-line" key={index}>
-                <div className="stat-name" onClick={handleClick}>
+              <div className="project-line" key={index}>
+                <div className="project-name" onClick={handleClick}>
                   {project.project_name}
                 </div>
                 <div
@@ -35,7 +35,7 @@ function Projects({ onChange }) {
                 >
                   <div
                     className="progress-bar"
-                    style={{ width: project.project_completed + "%" , backgroundColor: '#64CCC5'}}
+                    style={{ width: project.project_completed + "%" , backgroundColor: '#0091D5'}}
                   >
                     {project.project_completed}%
                   </div>

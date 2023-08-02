@@ -31,8 +31,8 @@ function Contacts() {
           <div className="card-header">Contacts</div>
           <div className="card-body contacts-card-body">
           {profiles.map((profile, index) => (
-            <div className="contacts" style={{ backgroundColor: '#64CCC5'}}key={index}>
-              <div style={{color: '#176B87'}}>{profile.name}</div>
+            <div className="contacts" style={{ backgroundColor: '#F1F1F1'}}key={index}>
+              <div>{profile.name}</div>
               <img src={profile.url}/>
             </div>
           ))}

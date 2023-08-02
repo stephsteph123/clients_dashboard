@@ -51,7 +51,7 @@ function Progress({ valueFromUpperCard }) {
                     cy="9"
                     r="8"
                     fill="transparent"
-                    stroke="#d2d3d4"
+                    stroke="#0091D5"
                     stroke-width="2"
                   ></circle>
                   <circle
@@ -60,7 +60,7 @@ function Progress({ valueFromUpperCard }) {
                     cy="9"
                     r="8"
                     fill="transparent"
-                    stroke="#64CCC5"
+                    stroke="#EA6A47"
                     stroke-width="2"
                     stroke-dasharray={strokeDash}
                   ></circle>
