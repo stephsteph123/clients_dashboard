@@ -69,6 +69,7 @@ Once the server is start via `./pocketbaseserve` the dashboard will be populated
 To view the API in json format, follow the link for Rest API.
 To view the Admin Dashboard follow the link for Admin UI.
 ![pocketbase CLI](pocketbaseCLI.png)
+
 Login details for Admin Dashboard:
 Email: pocketbase143@gmail.com
 Password: Thisisatest
