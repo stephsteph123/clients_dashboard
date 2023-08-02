@@ -34,9 +34,20 @@ To run the Client Dashboard project locally, please follow these steps:
 1. Clone the repository: `git clone https://github.com/your-username/client-dashboard.git`
 2. Install the project dependencies: `npm install`
 3. Start the development server: `npm start`
-4. Access the dashboard in your browser at: `http://localhost:3000`
+4. Start the database server: `./pocketbaseserve`
+5. Access the dashboard in your browser at: `http://localhost:3000`
 
 Ensure that you have the necessary dependencies, including Node.js and npm, installed on your machine.
+
+## REST API Database
+the database is hosted on [pocketbase](https://pocketbase.io/).
+Once the server is start via `./pocketbaseserve` the dashboard will be populated with API data.
+To view the API in json format, follow the link for Rest API.
+To view the Admin Dashboard follow the link for Admin UI.
+![pocketbase CLI](pocketbaseCLI.png)
+Login details for Admin Dashboard:
+Email: pocketbase143@gmail.com
+Password: Thisisatest
 
 ## Contribution
 Contributions to the Client Dashboard project are welcome. If you have suggestions, bug reports, or would like to contribute code, please follow these steps:
