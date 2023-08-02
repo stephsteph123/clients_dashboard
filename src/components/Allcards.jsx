@@ -16,14 +16,14 @@ function Allcards({ newValue }) {
   return (
     <>
       <div className="container-fluid bg-primary">
-        <div className="row db-wrapper" style={{ backgroundColor: '#DAFFFB' }}>
-        <div className="col col-1" style={{ backgroundColor: '#176B87' }}>
+        <div className="row db-wrapper" style={{ backgroundColor: '#F1F1F1' }}>
+        <div className="col col-1" style={{ backgroundColor: '#1C4E80' }}>
         </div>
           <div className="col col-11" style={{height: "100vh"}}>
             <div className="row header">
-              <nav className="navbar" style={{ backgroundColor: '#001C30' }}>
+              <nav className="navbar" style={{ backgroundColor: '#A5D8DD' }}>
                 <div className="container-fluid">
-                  <a className="navbar-brand" href="#" style={{color: '#176B87'}}>
+                  <a className="navbar-brand" href="#" style={{color: '#1C4E80'}}>
                     Client Dashboard
                   </a>
                 </div>
