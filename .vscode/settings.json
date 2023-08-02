@@ -8,5 +8,26 @@
         "**/Thumbs.db": true
     },
     "hide-files.files": [],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "actionButtons": {
+        "defaultColor": "#ff0034", // Can also use string color names.
+        "loadNpmCommands":false, // Disables automatic generation of actions for npm commands.
+        "reloadButton":"♻️", // Custom reload button text or icon (default ↻). null value enables automatic reload on configuration change
+        "commands": [
+            {
+                "cwd": "${workspaceFolder}", 	// Terminal initial folder ${workspaceFolder} and os user home as defaults
+                "name": "Start Frontend",
+                "color": "#fff0f0",
+                "singleInstance": true,
+                "command": "npm start", // This is executed in the terminal.
+            },
+            {
+                "cwd": "${workspaceFolder}/backend/pocketbase", 	// Terminal initial folder ${workspaceFolder} and os user home as defaults
+                "name": "Start Pocketbase",
+                "color": "#f0f0a0",
+                "singleInstance": true,
+                "command": "./pocketbase serve", // This is executed in the terminal.
+            },
+        ]
+    }
 }
